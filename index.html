@@ -21,19 +21,22 @@
 
 
         #slider { width: 1920px; height: 1079px; position: relative; }
-        #slider .black_background { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; z-index: 5; top: 0; left: 0;  }
+        /* #slider .black_background { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; z-index: 5; top: 0; left: 0;  } */
 
         section { width: 1920px; height: 900px; background-color: lightgray; }
+        section #subject_container { width: 800px; height: 15%; margin: 0 auto; display: flex; justify-content: space-between;  }
+        #subject_container :nth-child(1), :nth-child(2) { }
+
         section #video_space { width: 1000px; height: 562.5px; margin: 0 auto; }
         #video_space video { width: 100%; height: auto; }
         section #border_buttons { width: 1000px; height: 125px; margin: 0 auto; background-color: rgba(175, 175, 175); display: flex; justify-content: space-between; }
-        #border_buttons .button_boxs { border: 1.5px solid #333; text-align: center; }
+        #border_buttons .button_boxs { border-right: 1.5px solid #333; text-align: center; }
     </style>
 </head>
 <body>
     <div id="wrap">
         <header>
-            <img src="img/main/lego_logo.png" alt="레고 로고">
+            <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo.png" alt="레고 로고"></a>
             <ul>
                <li><a href="#">Home</a></li> 
                <li><a href="#">About</a></li> 
@@ -45,14 +48,18 @@
 
         <div id="slider">
             <img src="img/main/main_image1.jpg">
-            <div class="black_background">
-            </div>
+            <!-- <div class="black_background">
+            </div> -->
         </div>
 
         <section>
+            <div id="subject_container">
             <p>Business Solution</p>
-            <h1>성공적인 사업을 위한
-                전략적 맞춤 솔루션을 제공합니다.</h1>
+                <h1>
+                성공적인 사업을 위한<br>
+                전략적 맞춤 솔루션을 제공합니다.
+                </h1>
+            </div>
             <div id="video_space">
                 <video src="img/main/lego_video.mp4" loop muted autoplay controls></video>
             </div>
@@ -74,9 +81,11 @@
                     <p>어른이 환영</p>
                 </div>
                 <div class="button_boxs">
+                    <a href="#"><img src="img/main/rare_item.png" alt="희귀제품 아이콘"></a>
                     <p>레어제품</p>
                 </div>
                 <div class="button_boxs">
+                    <a href="#"><img src="img/main/popular_product.png" alt="인기제품 아이콘"></a>
                     <p>인기제품</p>
                 </div>
                 <div class="button_boxs">
