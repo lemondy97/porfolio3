@@ -10,6 +10,13 @@
         ul, ol, li { list-style: none;  }
         a { text-decoration: none; }
 
+        @font-face {
+        font-family: 'Minguk-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
         #wrap { width: 100%; height: auto; }
 
         header { width: 1320px; height: 75px; margin: 0 auto; }
@@ -23,14 +30,22 @@
         #slider { width: 1920px; height: 1079px; position: relative; }
         /* #slider .black_background { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; z-index: 5; top: 0; left: 0;  } */
 
-        section { width: 1920px; height: 900px; background-color: lightgray; }
-        section #subject_container { width: 800px; height: 15%; margin: 0 auto; display: flex; justify-content: space-between;  }
-        #subject_container :nth-child(1), :nth-child(2) { }
+        section { width: 1920px; height: 900px; background-color: rgb(190, 190, 190); }
+        section .subject_container { width: 800px; height: 15%; margin: 0 auto; display: flex; justify-content: space-between;  }
+        
 
         section #video_space { width: 1000px; height: 562.5px; margin: 0 auto; }
         #video_space video { width: 100%; height: auto; }
-        section #border_buttons { width: 1000px; height: 125px; margin: 0 auto; background-color: rgba(175, 175, 175); display: flex; justify-content: space-between; }
-        #border_buttons .button_boxs { border-right: 1.5px solid #333; text-align: center; }
+        section #border_buttons { width: 1000px; height: 125px; margin: 0 auto; background-color: lightgray; display: flex; justify-content: space-between; }
+        #border_buttons img { vertical-align: middle; }
+        #border_buttons .button_boxs { width: 125px; border-right: 1.5px solid #666; text-align: center; font-family: 'Minguk-Regular'; }
+
+        #section2 { width: 1920px; height: 800px; }
+        #section2 .subject_container2 { width: 1000px; height: 10%; margin: 0 auto; display: flex; justify-content: space-between; }
+
+        #section2 ul { width: 500px; height: 5%; margin: 0 auto; display: flex; justify-content: space-around; }
+        #section2 ul li { font-size: 22px; cursor: pointer; }
+        #section2 .logo_hover { cursor: pointer; }
     </style>
 </head>
 <body>
@@ -53,11 +68,11 @@
         </div>
 
         <section>
-            <div id="subject_container">
-            <p>Business Solution</p>
+            <div class="subject_container">
+            <p>VIP 회원가입</p>
                 <h1>
-                성공적인 사업을 위한<br>
-                전략적 맞춤 솔루션을 제공합니다.
+                더블 포인트 적립으로 리워드를<br>
+                더 빨리 이용할수있는 기회
                 </h1>
             </div>
             <div id="video_space">
@@ -81,7 +96,7 @@
                     <p>어른이 환영</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/rare_item.png" alt="희귀제품 아이콘"></a>
+                    <a href="#"><img src="img/main/rare_product.png" alt="희귀제품 아이콘"></a>
                     <p>레어제품</p>
                 </div>
                 <div class="button_boxs">
@@ -89,14 +104,31 @@
                     <p>인기제품</p>
                 </div>
                 <div class="button_boxs">
+                    <a href="#"><img src="img/main/movie.png" alt="영화 아이콘"></a>
                     <p>영화</p>
                 </div>
                 <div class="button_boxs">
+                    <a href="#"><img src="img/main/membership.png" alt="회원혜택 아이콘"></a>
                     <p>회원혜택</p>
                 </div>
             </div>
             
         </section>
+
+        <div id="section2">
+            <div class="subject_container2">
+                <p>추천제품</p>
+                <h1>가장 많이 고객분들께서<br> 선택하신 제품들입니다.</h1>
+            </div>
+            <ul>
+               <li>시리즈별</li>
+               <li>연령별</li>
+               <li>가격별</li> 
+            </ul>
+            <div>
+                <img src="img/main/lego_hover.png" alt="브랜드 이미지" class="logo_hover">
+            </div>
+        </div>
 
         <footer>
 
