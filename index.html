@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+
     <style>
         * { margin: 0; padding: 0; }
         ul, ol, li { list-style: none;  }
@@ -17,39 +22,61 @@
         font-style: normal;
         }
 
-        #wrap { width: 100%; height: auto; }
+        @font-face {
+        font-family: 'GimhaeGayaB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimhaeGayaB.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
 
-        header { width: 1320px; height: 75px; margin: 0 auto; }
+        #wrap { width: 100%; height: auto; }
+        .blank_space1 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: left }
+        .blank_space2 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: right }
+
+        header { width: 1303px; height: 75px; margin: 0 auto; background-color: rgb(255, 207, 0); }
         header img { float: left; }
         header ul { width: 70%; height: 100%; display: flex; justify-content: space-around; }
         header ul > li { font-size: 22px; line-height: 65px; font-weight: 500; }
-        header ul > li > a { color: #333; }
+        header ul > li > a { color: #333; font-family: 'Shippori Mincho', serif; }
 
 
 
         #slider { width: 1920px; height: 1079px; position: relative; }
         /* #slider .black_background { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; z-index: 5; top: 0; left: 0;  } */
 
-        section { width: 1920px; height: 900px; background-color: rgb(190, 190, 190); }
+        section { width: 1920px; height: 900px; background-color: rgb(14, 114, 182); color: #fff; }
         section .subject_container { width: 800px; height: 15%; margin: 0 auto; display: flex; justify-content: space-between;  }
         
 
         section #video_space { width: 1000px; height: 562.5px; margin: 0 auto; }
         #video_space video { width: 100%; height: auto; }
-        section #border_buttons { width: 1000px; height: 125px; margin: 0 auto; background-color: lightgray; display: flex; justify-content: space-between; }
+        section #border_buttons { width: 1000px; height: 125px; margin: 0 auto; background-color: rgb(35, 135, 194); display: flex; justify-content: space-between; }
         #border_buttons img { vertical-align: middle; }
-        #border_buttons .button_boxs { width: 125px; border-right: 1.5px solid #666; text-align: center; font-family: 'Minguk-Regular'; }
+        #border_buttons .button_boxs { width: 125px; border-right: 1.5px solid #111; text-align: center; font-family: 'Minguk-Regular'; }
 
         #section2 { width: 1920px; height: 800px; }
-        #section2 .subject_container2 { width: 1000px; height: 10%; margin: 0 auto; display: flex; justify-content: space-between; }
+        #section2 h1 { font-family: 'GimhaeGayaB'; }
+        #section2 .subject_container2 { width: 920px; height: 10%; margin: 0 auto; padding: 5%; display: flex; justify-content: space-between; }
 
-        #section2 ul { width: 500px; height: 5%; margin: 0 auto; display: flex; justify-content: space-around; }
-        #section2 ul li { font-size: 22px; cursor: pointer; }
-        #section2 .logo_hover { cursor: pointer; }
+        #section2 > ul:nth-of-type(1) { width: 500px; height: 5%; margin: 0 auto; padding-left: 14%; display: flex; justify-content: space-around; }
+        #section2 ul li { font-size: 25px; cursor: pointer; font-family: 'GimhaeGayaB'; }
+        #section2 .logo_hover { cursor: pointer; float: left; margin-left: 3%; margin-right: 3%; }
+
+        #section2 #rotating_image_wrap { float: left; width: 1100px; height: 450px; margin-top: 2.5%; overflow: hidden; }
+        #rotating_image_wrap #slide_image { width: 5650px; height: 100%; }
+        #slide_image li { width: 500px; height: 450px; margin-right: 50px; float: left; }
+        #slide_image li img { width: 500px; }
+
+        #rotating_image_wrap .image_wrap { width: 100%; height: 100%; }
+        
+
+
     </style>
 </head>
 <body>
     <div id="wrap">
+        <div class="blank_space1"></div>
+        <div class="blank_space2"></div>
         <header>
             <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo.png" alt="레고 로고"></a>
             <ul>
@@ -125,10 +152,58 @@
                <li>연령별</li>
                <li>가격별</li> 
             </ul>
-            <div>
+
                 <img src="img/main/lego_hover.png" alt="브랜드 이미지" class="logo_hover">
+            <div id="rotating_image_wrap">
+                
+                <ul id="slide_image">
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series1.png" alt="레고 스타워즈 시리즈">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series2.png" alt="레고 스타워즈 시리즈">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series3.png" alt="레고 마리오 시리즈">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series4.jpg" alt="레고 마리오 시리즈">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series5.jpg" alt="레고 닌자고 시리즈">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series6.jpg" alt="레고 닌자고 시리즈">
+                        </div>
+                    </li>
+                        <li>
+                            <div class="image_wrap">
+                                <img src="img/main/series7.jpg" alt="레고 마블 시리즈">
+                            </div>
+                        </li>
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series8.jpg" alt="레고 마블 시리즈">
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <script>
+
+        </script>
 
         <footer>
 
