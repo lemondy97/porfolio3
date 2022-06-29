@@ -9,9 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <style>
         * { margin: 0; padding: 0; }
+        body {  position: relative; }
         ul, ol, li { list-style: none;  }
         a { text-decoration: none; }
 
@@ -37,14 +41,35 @@
         header img { float: left; }
         header ul { width: 70%; height: 100%; display: flex; justify-content: space-around; }
         header ul > li { font-size: 22px; line-height: 65px; font-weight: 500; }
-        header ul > li > a { color: #333; font-family: 'Shippori Mincho', serif; }
+        header ul > li > a { color: #333; font-family: 'Shippori Mincho', serif; color: #555; }
 
 
 
-        #slider { width: 1920px; height: 1079px; position: relative; }
-        /* #slider .black_background { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; z-index: 5; top: 0; left: 0;  } */
+        .swiper { width: 100%; height: 100%; }
+        /* #slider .swiper_wrap { width: 300%; height: 100%; position: relative; display: flex; } */
 
-        section { width: 1920px; height: 900px; background-color: rgb(14, 114, 182); color: #fff; }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+        section { width: 100%; height: 900px; background-color: rgb(14, 114, 182); color: #fff; }
         section .subject_container { width: 800px; height: 15%; margin: 0 auto; display: flex; justify-content: space-between;  }
         
 
@@ -54,7 +79,7 @@
         #border_buttons img { vertical-align: middle; }
         #border_buttons .button_boxs { width: 125px; border-right: 1.5px solid #111; text-align: center; font-family: 'Minguk-Regular'; }
 
-        #section2 { width: 1920px; height: 800px; }
+        #section2 { width: 100%; height: 1000px; }
         #section2 h1 { font-family: 'GimhaeGayaB'; }
         #section2 .subject_container2 { width: 920px; height: 10%; margin: 0 auto; padding: 5%; display: flex; justify-content: space-between; }
 
@@ -62,12 +87,20 @@
         #section2 ul li { font-size: 25px; cursor: pointer; font-family: 'GimhaeGayaB'; }
         #section2 .logo_hover { cursor: pointer; float: left; margin-left: 3%; margin-right: 3%; }
 
-        #section2 #rotating_image_wrap { float: left; width: 1100px; height: 450px; margin-top: 2.5%; overflow: hidden; }
-        #rotating_image_wrap #slide_image { width: 5650px; height: 100%; }
-        #slide_image li { width: 500px; height: 450px; margin-right: 50px; float: left; }
-        #slide_image li img { width: 500px; }
+        #section2 #slider_wrap { float: left; width: 1100px; height: 650px; margin-top: 2.5%; overflow: hidden; }
+        #slider_wrap #slide_image1 { width: 5650px; height: 100%; }
+        #slide_image1 li { width: 500px; height: 650px; margin-right: 50px; float: left; }
+        #slide_image1 li img { width: 500px; transition: all ease 1s; }
 
-        #rotating_image_wrap .image_wrap { width: 100%; height: 100%; }
+        #slider_wrap .image_wrap { width: 100%; height: 100%; }
+
+        #slider_wrap #slide_image2, #slide_image3 { display: none; width: 5650px; height: 100%; }
+
+        #slide_image2 li { width: 500px; height: 650px; margin-right: 50px; float: left; }
+        #slide_image2 li img { width: 500px; transition: all ease 1s; }
+
+        #slide_image3 li { width: 500px; height: 650px; margin-right: 50px; float: left; }
+        #slide_image3 li img { width: 500px; transition: all ease 1s; }
         
 
 
@@ -88,11 +121,39 @@
             </ul>
         </header>
 
-        <div id="slider">
-            <img src="img/main/main_image1.jpg">
-            <!-- <div class="black_background">
-            </div> -->
+        <div class="swiper Swipe_control">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/main/main_image1.jpg" alt="메인 슬라이드 이미지">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/main_image2.jpg" alt="메인 슬라이드 이미지">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/main_image3.jpg" alt="메인 슬라이드 이미지">
+                </div>
+            </div>
         </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".Swipe_control", {
+              spaceBetween: 0,
+              centeredSlides: true,
+              autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+      
+          </script>
 
         <section>
             <div class="subject_container">
@@ -148,18 +209,17 @@
                 <h1>가장 많이 고객분들께서<br> 선택하신 제품들입니다.</h1>
             </div>
             <ul>
-               <li>시리즈별</li>
-               <li>연령별</li>
-               <li>가격별</li> 
+               <li class="product_menu1">시리즈별</li>
+               <li class="product_menu2">연령별</li>
+               <li class="product_menu3">가격별</li> 
             </ul>
 
                 <img src="img/main/lego_hover.png" alt="브랜드 이미지" class="logo_hover">
-            <div id="rotating_image_wrap">
-                
-                <ul id="slide_image">
+            <div id="slider_wrap">
+                <ul id="slide_image1">
                     <li>
                         <div class="image_wrap">
-                            <img src="img/main/series1.png" alt="레고 스타워즈 시리즈">
+                            <img src="img/main/series1.jpg" alt="레고 스타워즈 시리즈">
                         </div>
                     </li>
                     <li>
@@ -169,7 +229,7 @@
                     </li>
                     <li>
                         <div class="image_wrap">
-                            <img src="img/main/series3.png" alt="레고 마리오 시리즈">
+                            <img src="img/main/series3.jpeg" alt="레고 마리오 시리즈">
                         </div>
                     </li>
                     <li>
@@ -198,11 +258,111 @@
                         </div>
                     </li>
                 </ul>
+
+
+                <ul id="slide_image2">
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages1.jpg" alt="레고 연령별 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages2.jpg" alt="레고 연령별 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages3.png" alt="레고 연령별 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages4.png" alt="레고 연령별 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages5.jpg" alt="레고 연령별 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages6.jpeg" alt="레고 연령별 상품">
+                        </div>
+                    </li>
+                        <li>
+                            <div class="image_wrap2">
+                                <img src="img/main/ages7.png" alt="레고 연령별 상품">
+                            </div>
+                        </li>
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages8.png" alt="레고 연령별 상품">
+                        </div>
+                    </li>
+                </ul>
+
+                <ul id="slide_image3">
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value1.jpg" alt="레고 가격순 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value2.jpg" alt="레고 가격순 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value3.png" alt="레고 가격순 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value4.jpg" alt="레고 가격순 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value5.jpg" alt="레고 가격순 상품">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value6.png" alt="레고 가격순 상품">
+                        </div>
+                    </li>
+                        <li>
+                            <div class="image_wrap3">
+                                <img src="img/main/value7.jpg" alt="레고 가격순 상품">
+                            </div>
+                        </li>
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value8.jpg" alt="레고 가격순 상품">
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
         <script>
-
+            $(document).ready(function(){
+                $(".product_menu1").click(function(){
+                    $("#slide_image1").fadeIn();
+                    $("#slide_image2, #slide_image3").fadeOut();
+                });
+                $(".product_menu2").click(function(){
+                    $("#slide_image2").fadeIn();
+                    $("#slide_image1, #slide_image3").fadeOut();
+                });
+                $(".product_menu3").click(function(){
+                    $("#slide_image3").fadeIn();
+                    $("#slide_image1, #slide_image2").fadeOut();
+                });
+            });
         </script>
 
         <footer>
