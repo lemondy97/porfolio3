@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lego</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,24 +85,33 @@
 
         #section2 > ul:nth-of-type(1) { width: 500px; height: 5%; margin: 0 auto; padding-left: 14%; display: flex; justify-content: space-around; }
         #section2 ul li { font-size: 25px; cursor: pointer; font-family: 'GimhaeGayaB'; }
-        #section2 .logo_hover { cursor: pointer; float: left; margin-left: 3%; margin-right: 3%; }
 
-        #section2 #slider_wrap { float: left; width: 1100px; height: 650px; margin-top: 2.5%; overflow: hidden; }
+        #section2 #slider_wrap { float: left; overflow: scroll; white-space: nowrap; width: 1100px; height: 700px; margin-top: 2.5%; overflow: hidden; }
         #slider_wrap #slide_image1 { width: 5650px; height: 100%; }
-        #slide_image1 li { width: 500px; height: 650px; margin-right: 50px; float: left; }
+        #slide_image1 li { width: 500px; height: 700px; margin-right: 50px; float: left; }
         #slide_image1 li img { width: 500px; transition: all ease 1s; }
 
         #slider_wrap .image_wrap { width: 100%; height: 100%; }
 
         #slider_wrap #slide_image2, #slide_image3 { display: none; width: 5650px; height: 100%; }
 
-        #slide_image2 li { width: 500px; height: 650px; margin-right: 50px; float: left; }
+        #slide_image2 li { width: 500px; height: 700px; margin-right: 50px; float: left; }
         #slide_image2 li img { width: 500px; transition: all ease 1s; }
 
-        #slide_image3 li { width: 500px; height: 650px; margin-right: 50px; float: left; }
+        #slide_image3 li { width: 500px; height: 700px; margin-right: 50px; float: left; }
         #slide_image3 li img { width: 500px; transition: all ease 1s; }
-        
 
+        #section2 #logo_hover_container {}
+        #logo_hover_container .logo_hover_box1 { background-image: url(img/main/lego_hover1.png); width: 382px; height: 300px; border: none; cursor: pointer; float: left; 
+                                                 margin-left: 3%; margin-right: 3%; word-break: break-all; transition: all ease 1s; border: 7.5px solid #ff0000; }
+        #logo_hover_container .logo_hover_box2 { display: none; background-image: url(img/main/lego_hover2.jpg); width: 382px; height: 300px; border: none; cursor: pointer; float: left; 
+                                                 margin-left: 3%; margin-right: 3%; word-break: break-all; transition: all ease 1s; border: 7.5px solid #0000FF; }
+        #logo_hover_container .logo_hover_box3 { display: none; background-image: url(img/main/lego_hover3.jpg); width: 382px; height: 300px; border: none; cursor: pointer; float: left; 
+                                                 margin-left: 3%; margin-right: 3%; word-break: break-all; transition: all ease 1s; border: 7.5px solid dodgerblue; }
+
+        .logo_hover_box1 .hidden_text1 { display: none;  }
+        .logo_hover_box2 .hidden_text2 { display: none;  }
+        .logo_hover_box3 .hidden_text3 { display: none;  }
 
     </style>
 </head>
@@ -214,8 +223,27 @@
                <li class="product_menu3">가격별</li> 
             </ul>
 
-                <img src="img/main/lego_hover.png" alt="브랜드 이미지" class="logo_hover">
             <div id="slider_wrap">
+                <div id="logo_hover_container">
+                    <div class="logo_hover_box1">
+                        <div class="hidden_text1">
+                            <h3>흥미진진한 레고 시리즈와 함께하세요!</h3>
+                            <p>닌자고, 스타워즈, 마블의 수많은 영웅등 레고로 재현된 이야기를 경험할수있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="logo_hover_box2">
+                        <div class="hidden_text2">
+                            <h3>흥미진진한 레고 시리즈와 함께하세요!</h3>
+                            <p>닌자고, 스타워즈, 마블의 수많은 영웅등 레고로 재현된 이야기를 경험할수있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="logo_hover_box3">
+                        <div class="hidden_text3">
+                            <h3>흥미진진한 레고 시리즈와 함께하세요!</h3>
+                            <p>닌자고, 스타워즈, 마블의 수많은 영웅등 레고로 재현된 이야기를 경험할수있습니다.</p>
+                        </div>
+                    </div>
+                </div>
                 <ul id="slide_image1">
                     <li>
                         <div class="image_wrap">
@@ -273,12 +301,12 @@
                     </li>
                     <li>
                         <div class="image_wrap2">
-                            <img src="img/main/ages3.png" alt="레고 연령별 상품">
+                            <img src="img/main/ages3.jpg" alt="레고 연령별 상품">
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap2">
-                            <img src="img/main/ages4.png" alt="레고 연령별 상품">
+                            <img src="img/main/ages4.jpg" alt="레고 연령별 상품">
                         </div>
                     </li>
                     <li>
@@ -298,7 +326,7 @@
                         </li>
                     <li>
                         <div class="image_wrap2">
-                            <img src="img/main/ages8.png" alt="레고 연령별 상품">
+                            <img src="img/main/ages8.jpg" alt="레고 연령별 상품">
                         </div>
                     </li>
                 </ul>
@@ -353,14 +381,52 @@
                 $(".product_menu1").click(function(){
                     $("#slide_image1").fadeIn();
                     $("#slide_image2, #slide_image3").fadeOut();
+                    $(".logo_hover_box1").fadeIn();
+                    $(".logo_hover_box2, .logo_hover_box3").fadeOut();
                 });
                 $(".product_menu2").click(function(){
                     $("#slide_image2").fadeIn();
                     $("#slide_image1, #slide_image3").fadeOut();
+                    $(".logo_hover_box2").fadeIn();
+                    $(".logo_hover_box1, .logo_hover_box3").fadeOut();
                 });
                 $(".product_menu3").click(function(){
                     $("#slide_image3").fadeIn();
                     $("#slide_image1, #slide_image2").fadeOut();
+                    $(".logo_hover_box3").fadeIn();
+                    $(".logo_hover_box1, .logo_hover_box2").fadeOut();
+                });
+            });
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                $(".logo_hover_box1").mouseenter(function(){
+                    $(this).css('background-image', 'url()');
+                    $(".hidden_text1").fadeIn();
+                    $(".hidden_text2, .hidden_text3").fadeOut();
+                });
+                $(".logo_hover_box1").mouseleave(function(){
+                    $(this).css('background-image', 'url(img/main/lego_hover1.png)')
+                    $(".hidden_text1").fadeOut();
+                });
+                $(".logo_hover_box2").mouseenter(function(){
+                    $(this).css('background-image', 'url()');
+                    $(".hidden_text2").fadeIn();
+                    $(".hidden_text1, .hidden_text3").fadeOut();
+                });
+                $(".logo_hover_box2").mouseleave(function(){
+                    $(this).css('background-image', 'url(img/main/lego_hover2.jpg)')
+                    $(".hidden_text2").fadeOut();
+                });
+                $(".logo_hover_box3").mouseenter(function(){
+                    $(this).css('background-image', 'url()');
+                    $(".hidden_text3").fadeIn();
+                    $(".hidden_text1, .hidden_text2").fadeOut();
+                });
+                $(".logo_hover_box3").mouseleave(function(){
+                    $(this).css('background-image', 'url(img/main/lego_hover3.jpg)')
+                    $(".hidden_text3").fadeOut();
                 });
             });
         </script>
