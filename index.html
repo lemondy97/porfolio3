@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
     
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
     <style>
         * { margin: 0; padding: 0; }
         body {  position: relative; }
@@ -26,9 +26,10 @@
         font-style: normal;
         }
 
+
         @font-face {
-        font-family: 'GimhaeGayaB';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimhaeGayaB.woff') format('woff');
+        font-family: 'Eoe_Zno_M';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_M.woff') format('woff');
         font-weight: normal;
         font-style: normal;
         }
@@ -69,8 +70,10 @@
 
         .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-        section { width: 100%; height: 900px; background-color: rgb(14, 114, 182); color: #fff; }
-        section .subject_container { width: 800px; height: 15%; margin: 0 auto; display: flex; justify-content: space-between;  }
+        section { width: 100%; height: 950px; background-color: rgb(14, 114, 182); color: #fff; }
+
+        section p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
+        section h1 { text-align: center; font-size: 30px; font-family: 'Eoe_Zno_M'; padding-bottom: 3%; }
         
 
         section #video_space { width: 1000px; height: 562.5px; margin: 0 auto; }
@@ -80,38 +83,44 @@
         #border_buttons .button_boxs { width: 125px; border-right: 1.5px solid #111; text-align: center; font-family: 'Minguk-Regular'; }
 
         #section2 { width: 100%; height: 1000px; }
-        #section2 h1 { font-family: 'GimhaeGayaB'; }
-        #section2 .subject_container2 { width: 920px; height: 10%; margin: 0 auto; padding: 5%; display: flex; justify-content: space-between; }
+        #section2 p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
+        #section2 h1:nth-child(2) { font-family: 'Eoe_Zno_M'; font-size: 30px; text-align: center; padding-bottom: 3%; }
 
         #section2 > ul:nth-of-type(1) { width: 500px; height: 5%; margin: 0 auto; padding-left: 14%; display: flex; justify-content: space-around; }
-        #section2 ul li { font-size: 25px; cursor: pointer; font-family: 'GimhaeGayaB'; }
+        #section2 ul li { font-size: 25px; cursor: pointer; font-family: 'Eoe_Zno_M'; }
 
-        #section2 #slider_wrap { float: left; overflow: scroll; white-space: nowrap; width: 1100px; height: 700px; margin-top: 2.5%; overflow: hidden; }
-        #slider_wrap #slide_image1 { width: 5650px; height: 100%; }
-        #slide_image1 li { width: 500px; height: 700px; margin-right: 50px; float: left; }
-        #slide_image1 li img { width: 500px; transition: all ease 1s; }
+        #section2 #slider_wrap { float: left;  white-space: nowrap; width: 1000px; height: 500px; margin-top: 2.5%; margin-left: calc(382px + 6%); overflow: hidden; position: relative; }
+        #slider_wrap #slide_image1 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
+        #slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        #slide_image1 li img { width: 300px; transition: all ease 1s; }
 
         #slider_wrap .image_wrap { width: 100%; height: 100%; }
 
         #slider_wrap #slide_image2, #slide_image3 { display: none; width: 5650px; height: 100%; }
 
-        #slide_image2 li { width: 500px; height: 700px; margin-right: 50px; float: left; }
-        #slide_image2 li img { width: 500px; transition: all ease 1s; }
+        #slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        #slide_image2 li img { width: 300px; transition: all ease 1s; }
 
-        #slide_image3 li { width: 500px; height: 700px; margin-right: 50px; float: left; }
-        #slide_image3 li img { width: 500px; transition: all ease 1s; }
+        #slide_image3 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        #slide_image3 li img { width: 300px; transition: all ease 1s; }
 
-        #section2 #logo_hover_container {}
-        #logo_hover_container .logo_hover_box1 { background-image: url(img/main/lego_hover1.png); width: 382px; height: 300px; border: none; cursor: pointer; float: left; 
-                                                 margin-left: 3%; margin-right: 3%; word-break: break-all; transition: all ease 1s; border: 7.5px solid #ff0000; }
+        #section2 #logo_hover_container { position: relative; }
+        #logo_hover_container .logo_hover_box1 { background-image: url(img/main/lego_hover1.png); width: 382px; height: 300px; border: none; cursor: pointer;  
+                                                 margin-left: 3%; margin-right: 3%; transition: all ease 1s; border: 7.5px solid #ff0000; text-align: center; position: absolute; top: 0; left: 0; }
         #logo_hover_container .logo_hover_box2 { display: none; background-image: url(img/main/lego_hover2.jpg); width: 382px; height: 300px; border: none; cursor: pointer; float: left; 
-                                                 margin-left: 3%; margin-right: 3%; word-break: break-all; transition: all ease 1s; border: 7.5px solid #0000FF; }
+                                                 margin-left: 3%; margin-right: 3%; transition: all ease 1s; border: 7.5px solid #0000FF; text-align: center; position: absolute; top: 0; left: 0; }
         #logo_hover_container .logo_hover_box3 { display: none; background-image: url(img/main/lego_hover3.jpg); width: 382px; height: 300px; border: none; cursor: pointer; float: left; 
-                                                 margin-left: 3%; margin-right: 3%; word-break: break-all; transition: all ease 1s; border: 7.5px solid dodgerblue; }
+                                                 margin-left: 3%; margin-right: 3%; transition: all ease 1s; border: 7.5px solid dodgerblue; text-align: center; position: absolute; top: 0; left: 0; }
+        .logo_hover_box1 h2, .logo_hover_box2 h2, .logo_hover_box3 h2 { margin-top: 5%; font-size: 33px; }
+        .logo_hover_box1 p, .logo_hover_box2 p, .logo_hover_box3 p { margin-top: 15%; width: fit-content; max-width: 382px; word-break: break-all; font-size: 24px; }
 
-        .logo_hover_box1 .hidden_text1 { display: none;  }
-        .logo_hover_box2 .hidden_text2 { display: none;  }
-        .logo_hover_box3 .hidden_text3 { display: none;  }
+        .logo_hover_box1 .hidden_text1 { display: none; font-family: 'Eoe_Zno_M';  }
+        .logo_hover_box2 .hidden_text2 { display: none; font-family: 'Eoe_Zno_M';  }
+        .logo_hover_box3 .hidden_text3 { display: none; font-family: 'Eoe_Zno_M';  }
+
+        #slider { width: 50%; margin: 0 auto; position: absolute; top: 70.5%; left: 30%;  }
+
+        #section3 { width: 100%; height: 850px; background-color: rgb(220, 220, 220); }
 
     </style>
 </head>
@@ -165,13 +174,11 @@
           </script>
 
         <section>
-            <div class="subject_container">
             <p>VIP 회원가입</p>
                 <h1>
                 더블 포인트 적립으로 리워드를<br>
                 더 빨리 이용할수있는 기회
                 </h1>
-            </div>
             <div id="video_space">
                 <video src="img/main/lego_video.mp4" loop muted autoplay controls></video>
             </div>
@@ -213,37 +220,42 @@
         </section>
 
         <div id="section2">
-            <div class="subject_container2">
                 <p>추천제품</p>
                 <h1>가장 많이 고객분들께서<br> 선택하신 제품들입니다.</h1>
-            </div>
             <ul>
                <li class="product_menu1">시리즈별</li>
                <li class="product_menu2">연령별</li>
                <li class="product_menu3">가격별</li> 
             </ul>
 
-            <div id="slider_wrap">
-                <div id="logo_hover_container">
-                    <div class="logo_hover_box1">
-                        <div class="hidden_text1">
-                            <h3>흥미진진한 레고 시리즈와 함께하세요!</h3>
-                            <p>닌자고, 스타워즈, 마블의 수많은 영웅등 레고로 재현된 이야기를 경험할수있습니다.</p>
-                        </div>
-                    </div>
-                    <div class="logo_hover_box2">
-                        <div class="hidden_text2">
-                            <h3>흥미진진한 레고 시리즈와 함께하세요!</h3>
-                            <p>닌자고, 스타워즈, 마블의 수많은 영웅등 레고로 재현된 이야기를 경험할수있습니다.</p>
-                        </div>
-                    </div>
-                    <div class="logo_hover_box3">
-                        <div class="hidden_text3">
-                            <h3>흥미진진한 레고 시리즈와 함께하세요!</h3>
-                            <p>닌자고, 스타워즈, 마블의 수많은 영웅등 레고로 재현된 이야기를 경험할수있습니다.</p>
-                        </div>
+            <div id="logo_hover_container">
+                <div class="logo_hover_box1">
+                    <div class="hidden_text1">
+                        <h2>흥미진진한 레고 시리즈와 함께하세요!</h3>
+                        <p>닌자고, 스타워즈, 마블의 수많은 영웅등 레고로 재현된 이야기를 경험하며
+                           새로운 주인공이 되어 이야기를 펼쳐 나가세요.
+                        </p>
                     </div>
                 </div>
+                <div class="logo_hover_box2">
+                    <div class="hidden_text2">
+                        <h2>어려움을 헤쳐나가세요!</h3>
+                        <p>산타의 선물가게를 포함하여 높은 레벨의 디즈니 궁전까지 연령에 따라
+                            난이도를 조정한 세트를 만들어보세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="logo_hover_box3">
+                    <div class="hidden_text3">
+                        <h2>값비싸지만 대체할수없는 경험을 누리세요!</h3>
+                        <p>다른 레고 세트들도 훌륭하지만 이 값비싼 세트들은 다른 것들과는
+                            차원이 다른 완성도를 갖춘 작품을 만들수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slider_wrap">
                 <ul id="slide_image1">
                     <li>
                         <div class="image_wrap">
@@ -257,7 +269,7 @@
                     </li>
                     <li>
                         <div class="image_wrap">
-                            <img src="img/main/series3.jpeg" alt="레고 마리오 시리즈">
+                            <img src="img/main/series3.png" alt="레고 마리오 시리즈">
                         </div>
                     </li>
                     <li>
@@ -291,7 +303,7 @@
                 <ul id="slide_image2">
                     <li>
                         <div class="image_wrap2">
-                            <img src="img/main/ages1.jpg" alt="레고 연령별 상품">
+                            <img src="img/main/ages1.png" alt="레고 연령별 상품">
                         </div>
                     </li>
                     <li>
@@ -311,17 +323,17 @@
                     </li>
                     <li>
                         <div class="image_wrap2">
-                            <img src="img/main/ages5.jpg" alt="레고 연령별 상품">
+                            <img src="img/main/ages5.jpeg" alt="레고 연령별 상품">
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap2">
-                            <img src="img/main/ages6.jpeg" alt="레고 연령별 상품">
+                            <img src="img/main/ages6.jpg" alt="레고 연령별 상품">
                         </div>
                     </li>
                         <li>
                             <div class="image_wrap2">
-                                <img src="img/main/ages7.png" alt="레고 연령별 상품">
+                                <img src="img/main/ages7.jpg" alt="레고 연령별 상품">
                             </div>
                         </li>
                     <li>
@@ -374,7 +386,67 @@
                     </li>
                 </ul>
             </div>
+
         </div>
+
+        
+
+        <!-- <script>
+            var slider = document.getElementById('slider');
+
+            noUiSlider.create(slider, {
+                start: [0],
+                connect: true,
+                range: { 'min': 0, 'max': 100 }
+            });
+        </script> -->
+
+        <script>
+            let Slider = document.querySelector("#slider_wrap")
+            let innerSlider = document.querySelector("#slide_image1")
+            let pressed = false;
+            let startx
+            let x
+
+            Slider.addEventListener("mousedown", e => {
+                pressed = true;
+                startx = e.offsetX - innerSlider.offsetLeft;
+                Slider.style.cursor = "grabbing";
+            });
+
+            Slider.addEventListener("mouseenter", () => {
+                Slider.style.cursor = "grab";
+            });
+
+            Slider.addEventListener("mouseup", () => {
+                Slider.style.cursor = "grab";
+            });
+
+            window.addEventListener("mouseup", () => {
+                pressed = false;
+            });
+
+            Slider.addEventListener("mousemove", e => {
+                if(!pressed) return
+                e.preventDefault()
+                x = e.offsetX
+
+                innerSlider.style.left = `${x - startx}px`;
+                checkboundary();
+            });
+
+            function checkboundary(){
+                let outer = Slider.getBoundingClientRect();
+                let inner = innerSlider.getBoundingClientRect()
+
+                if(parseInt(innerSlider.style.left) > 0){
+                    innerSlider.style.left = "0px";
+                } else if ( inner.right < outer.right ){
+                    innerSlider.style.left = `-${inner.width - outer.width}px`
+                }
+            }
+
+        </script>
 
         <script>
             $(document).ready(function(){
@@ -430,6 +502,10 @@
                 });
             });
         </script>
+
+        <div id="section3">
+
+        </div>
 
         <footer>
 
