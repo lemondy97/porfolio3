@@ -93,22 +93,21 @@
         #section2 ul li { font-size: 25px; cursor: pointer; font-family: 'Eoe_Zno_M'; }
 
         #section2 #slider_wrap { float: left;  white-space: nowrap; width: 1000px; height: 500px; margin-top: 2.5%; margin-left: calc(382px + 6%); overflow: hidden; position: relative; }
-        #slider_wrap #slide_image1 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        #slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        #slide_image1 li img { width: 300px; transition: all ease 1s; }
+        #slider_wrap .slide_image1 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
+        .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image1 li img { width: 300px; }
+
+        #slider_wrap .slide_image2 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
+        .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image1 li img { width: 300px; }
+
+        #slider_wrap .slide_image3 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
+        .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image1 li img { height: 300px; }
 
         #slider_wrap .image_wrap, .image_wrap2, .image_wrap3 { width: 100%; height: 100%; text-align: center; }
         .image_wrap, .image_wrap2, .image_wrap3 img { vertical-align: middle; }
 
-
-
-        #slider_wrap #slide_image2, #slide_image3 { display: none; width: 5650px; height: 100%; }
-
-        #slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        #slide_image2 li img { width: 300px; transition: all ease 1s; }
-
-        #slide_image3 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        #slide_image3 li img { width: 300px; transition: all ease 1s; }
 
         #section2 #logo_hover_container { position: relative; }
         #logo_hover_container .logo_hover_box1 { background-image: url(img/main/lego_hover1.png); width: 382px; height: 300px; border: none; cursor: pointer;  background-repeat: no-repeat;
@@ -124,9 +123,13 @@
         .logo_hover_box2 .hidden_text2 { display: none; font-family: 'Eoe_Zno_M';  }
         .logo_hover_box3 .hidden_text3 { display: none; font-family: 'Eoe_Zno_M';  }
 
-       #section2 .product_moving { font-size: 30px; font-family: 'Eoe_Zno_M'; color: coral; position: absolute; top: 85%; left: 43%;   }
+       #section2 .product_moving { font-size: 30px; font-family: 'Eoe_Zno_M'; color: coral; position: absolute; top: 85%; left: 43%; }
 
-        #section3 { width: 100%; height: 750px; background-color: rgb(220, 220, 220); position: relative; }
+       #section2 .hidden_text4 { font-family: 'Eoe_Zno_M'; }
+       #section2 .hidden_text5 { display: none; font-family: 'Eoe_Zno_M'; }
+       #section2 .hidden_text6 { display: none; font-family: 'Eoe_Zno_M'; }
+
+        #section3 { width: 100%; height: 725px; background-color: rgb(220, 220, 220); position: relative; }
         #section3 p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
         #section3 h1:nth-child(2) { font-family: 'Eoe_Zno_M'; font-size: 30px; text-align: center; padding-bottom: 3%; }
 
@@ -141,15 +144,15 @@
 
         
 
-        .left { position: absolute; top: 80%; left: 40%; display: block; font-size: 75px; color: #222; line-height: 25px;
-                             cursor: pointer;  height: 50px; transition: all 0.5s ease; transform: translate(-50%); }
-        .right { position: absolute; top: 80%; left: 45%; display: block; font-size: 75px; color: #222; line-height: 25px;
-                             cursor: pointer;  height: 50px; transition: all 0.5s ease; transform: translate(-50%); }
-        .left:hover { color: #555; }
-        .right:hover { color: #555; }
+        .left { position: absolute; top: 85%; left: 49%; font-size: 62.5px; color: #222; line-height: 40px;
+                             cursor: pointer; transition: all 0.5s ease; transform: translate(-50%); }
+        .right { position: absolute; top: 85%; left: 51.5%; font-size: 62.55px; color: #222; line-height: 40px;
+                             cursor: pointer; transition: all 0.5s ease; transform: translate(-50%); }
+        .left:hover { color: #666; }
+        .right:hover { color: #666; }
 
-        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; }
-        .small_news_box .black_background { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.5); }
+        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: 17.7%; left: 67.5%;  }
+        .small_news_box .black_background { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.35); }
 
         #section4 { width: 100%; height: 800px; }
         #section4 #employment_container { width: 100%; height: 800px; position: relative; display: flex; overflow: hidden; }
@@ -168,6 +171,9 @@
 
         footer button:nth-of-type(2) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer; }
         footer button:nth-of-type(2):hover { border-color: lightgray; color: lightgray}
+
+        /* #section_wrap { position: relative; overflow: hidden; }
+        #section_wrap section { position: absolute; transition: 500ms cubic-bezier(1, 0, 0, 1); } */
 
     </style>
 </head>
@@ -220,6 +226,7 @@
       
           </script>
 
+    
         <section>
             <p>VIP 회원가입</p>
                 <h1>
@@ -303,156 +310,156 @@
             </div>
             
             <div id="slider_wrap">
-                <ul id="slide_image1">
+                <ul class="slide_image1">
                     <li>
                         <div class="image_wrap">
                             <img src="img/main/series1.jpg" alt="레고 스타워즈 시리즈">
-                            <p>스타워즈 시리즈</p>
+                            <p class="hidden_text4">스타워즈 시리즈</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap">
                             <img src="img/main/series2.png" alt="레고 스타워즈 시리즈">
-                            <p>스타워즈 시리즈</p>
+                            <p class="hidden_text4">스타워즈 시리즈</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap">
                             <img src="img/main/series3.png" alt="레고 마리오 시리즈">
-                            <p>마리오 시리즈</p>
+                            <p class="hidden_text4">마리오 시리즈</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap">
                             <img src="img/main/series4.jpg" alt="레고 마리오 시리즈">
-                            <p>마리오 시리즈</p>
+                            <p class="hidden_text4">마리오 시리즈</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap">
                             <img src="img/main/series5.jpg" alt="레고 닌자고 시리즈">
-                            <p>닌자고 시리즈</p>
+                            <p class="hidden_text4">닌자고 시리즈</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap">
                             <img src="img/main/series6.jpg" alt="레고 닌자고 시리즈">
-                            <p>닌자고 시리즈</p>
+                            <p class="hidden_text4">닌자고 시리즈</p>
                         </div>
                     </li>
-                        <li>
-                            <div class="image_wrap">
-                                <img src="img/main/series7.jpg" alt="레고 마블 시리즈">
-                                <p>마블 시리즈</p>
-                            </div>
+                    <li>
+                        <div class="image_wrap">
+                            <img src="img/main/series7.jpg" alt="레고 마블 시리즈" class="toggle_image1">
+                            <p class="hidden_text4">마블 시리즈</p>
+                        </div>
                         </li>
                     <li>
                         <div class="image_wrap">
-                            <img src="img/main/series8.jpg" alt="레고 마블 시리즈">
-                            <p>마블 시리즈</p>
+                            <img src="img/main/series8.jpg" alt="레고 마블 시리즈" class="toggle_image1">
+                            <p class="hidden_text4">마블 시리즈</p>
                         </div>
                     </li>
                 </ul>
 
 
-                <ul id="slide_image2">
+                <ul class="slide_image2">
                     <li>
                         <div class="image_wrap2">
                             <img src="img/main/ages1.png" alt="레고 연령별 상품">
-                            <p>3~4세 이용자</p>
+                            <p class="hidden_text5">3~4세 이용자</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap2">
                             <img src="img/main/ages2.jpg" alt="레고 연령별 상품">
-                            <p>3~4세 이용자</p>
+                            <p class="hidden_text5">3~4세 이용자</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap2">
                             <img src="img/main/ages3.jpg" alt="레고 연령별 상품">
-                            <p>4~5세 이용자</p>
+                            <p class="hidden_text5">4~5세 이용자</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap2">
                             <img src="img/main/ages4.jpg" alt="레고 연령별 상품">
-                            <p>4~5세 이용자</p>
+                            <p class="hidden_text5">4~5세 이용자</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap2">
                             <img src="img/main/ages5.jpeg" alt="레고 연령별 상품">
-                            <p>5~6세 이용자</p>
+                            <p class="hidden_text5">5~6세 이용자</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap2">
                             <img src="img/main/ages6.jpg" alt="레고 연령별 상품">
-                            <p>5~6세 이용자</p>
+                            <p class="hidden_text5">5~6세 이용자</p>
                         </div>
                     </li>
-                        <li>
-                            <div class="image_wrap2">
-                                <img src="img/main/ages7.jpg" alt="레고 연령별 상품">
-                                <p>7~9세 이용자</p>
-                            </div>
-                        </li>
+                    <li>
+                        <div class="image_wrap2">
+                            <img src="img/main/ages7.jpg" alt="레고 연령별 상품">
+                            <p class="hidden_text5">7~9세 이용자</p>
+                        </div>
+                    </li>
                     <li>
                         <div class="image_wrap2">
                             <img src="img/main/ages8.jpg" alt="레고 연령별 상품">
-                            <p>7~9세 이용자</p>
+                            <p class="hidden_text5">7~9세 이용자</p>
                         </div>
                     </li>
                 </ul>
 
-                <ul id="slide_image3">
+                <ul class="slide_image3">
                     <li>
                         <div class="image_wrap3">
                             <img src="img/main/value1.jpg" alt="레고 가격순 상품">
-                            <p>454만원</p>
+                            <p class="hidden_text6">454만원</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap3">
                             <img src="img/main/value2.jpg" alt="레고 가격순 상품">
-                            <p>308만원</p>
+                            <p class="hidden_text6">308만원</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap3">
                             <img src="img/main/value3.png" alt="레고 가격순 상품">
-                            <p>318만원</p>
+                            <p class="hidden_text6">318만원</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap3">
                             <img src="img/main/value4.jpg" alt="레고 가격순 상품">
-                            <p>231만원</p>
+                            <p class="hidden_text6">231만원</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap3">
                             <img src="img/main/value5.jpg" alt="레고 가격순 상품">
-                            <p>206만원</p>
+                            <p class="hidden_text6">206만원</p>
                         </div>
                     </li>
                     <li>
                         <div class="image_wrap3">
                             <img src="img/main/value6.png" alt="레고 가격순 상품">
-                            <p>292만원</p>
+                            <p class="hidden_text6">292만원</p>
                         </div>
                     </li>
-                        <li>
-                            <div class="image_wrap3">
-                                <img src="img/main/value7.jpg" alt="레고 가격순 상품">
-                                <p>154만원</p>
-                            </div>
-                        </li>
+                    <li>
+                        <div class="image_wrap3">
+                            <img src="img/main/value7.jpg" alt="레고 가격순 상품">
+                            <p class="hidden_text6">154만원</p>
+                        </div>
+                    </li>
                     <li>
                         <div class="image_wrap3">
                             <img src="img/main/value8.jpg" alt="레고 가격순 상품">
-                            <p>192만원</p>
+                            <p class="hidden_text6">192만원</p>
                         </div>
                     </li>
                 </ul>
@@ -476,14 +483,20 @@
 
         <script>
             let Slider = document.querySelector("#slider_wrap")
-            let innerSlider = document.querySelector("#slide_image1")
+            let innerSlider1 = document.querySelector(".slide_image1")
+            let innerSlider2 = document.querySelector(".slide_image2")
+            let innerSlider3 = document.querySelector(".slide_image3")
             let pressed = false;
             let startx
+            let starty
+            let startz
             let x
 
             Slider.addEventListener("mousedown", e => {
                 pressed = true;
-                startx = e.offsetX - innerSlider.offsetLeft;
+                startx = e.offsetX - innerSlider1.offsetLeft;
+                starty = e.offsetX - innerSlider2.offsetLeft;
+                startz = e.offsetX - innerSlider3.offsetLeft;
                 Slider.style.cursor = "grabbing";
             });
 
@@ -504,18 +517,36 @@
                 e.preventDefault()
                 x = e.offsetX
 
-                innerSlider.style.left = `${x - startx}px`;
+                innerSlider1.style.left = `${x - startx}px`;
+                checkboundary();
+                innerSlider2.style.left = `${x - starty}px`;
+                checkboundary();
+                innerSlider3.style.left = `${x - startz}px`;
                 checkboundary();
             });
 
             function checkboundary(){
                 let outer = Slider.getBoundingClientRect();
-                let inner = innerSlider.getBoundingClientRect()
+                let inner = innerSlider1.getBoundingClientRect()
+                let inner2 = innerSlider2.getBoundingClientRect()
+                let inner3 = innerSlider3.getBoundingClientRect()
 
-                if(parseInt(innerSlider.style.left) > 0){
-                    innerSlider.style.left = "0px";
+                if(parseInt(innerSlider1.style.left) > 0){
+                    innerSlider1.style.left = "0px";
                 } else if ( inner.right < outer.right ){
-                    innerSlider.style.left = `-${inner.width - outer.width}px`
+                    innerSlider1.style.left = `-${inner.width - outer.width}px`
+                }
+
+                if(parseInt(innerSlider2.style.left) > 0){
+                    innerSlider2.style.left = "0px";
+                } else if ( inner2.right < outer.right ){
+                    innerSlider2.style.left = `-${inner2.width - outer.width}px`
+                }
+
+                if(parseInt(innerSlider3.style.left) > 0){
+                    innerSlider3.style.left = "0px";
+                } else if ( inner3.right < outer.right ){
+                    innerSlider3.style.left = `-${inner.width - outer.width}px`
                 }
             }
 
@@ -524,20 +555,26 @@
         <script>
             $(document).ready(function(){
                 $(".product_menu1").click(function(){
-                    $("#slide_image1").fadeIn(1000);
-                    $("#slide_image2, #slide_image3").fadeOut(1000);
+                    $(".slide_image1").fadeIn(1000);
+                    $(".slide_image2, .slide_image3").fadeOut(1000);
+                    $(".hidden_text4").fadeIn(1000);
+                    $(".hidden_text5, .hidden_text6").fadeOut(1000);
                     $(".logo_hover_box1").fadeIn(1000);
                     $(".logo_hover_box2, .logo_hover_box3").fadeOut(1000);
                 });
                 $(".product_menu2").click(function(){
-                    $("#slide_image2").fadeIn(1000);
-                    $("#slide_image1, #slide_image3").fadeOut(1000);
+                    $(".slide_image2").fadeIn(1000);
+                    $(".slide_image1, .slide_image3").fadeOut(1000);
+                    $(".hidden_text5").fadeIn(1000);
+                    $(".hidden_text4, .hidden_text6").fadeOut(1000);
                     $(".logo_hover_box2").fadeIn(1000);
                     $(".logo_hover_box1, .logo_hover_box3").fadeOut(1000);
                 });
                 $(".product_menu3").click(function(){
-                    $("#slide_image3").fadeIn(1000);
-                    $("#slide_image1, #slide_image2").fadeOut(1000);
+                    $(".slide_image3").fadeIn(1000);
+                    $(".slide_image1, .slide_image2").fadeOut(1000);
+                    $(".hidden_text6").fadeIn(1000);
+                    $(".hidden_text4, .hidden_text5").fadeOut(1000);
                     $(".logo_hover_box3").fadeIn(1000);
                     $(".logo_hover_box1, .logo_hover_box2").fadeOut(1000);
                 });
@@ -578,10 +615,9 @@
 
         <div id="section3">
             <p>NEWS</p>
-            <h1>레고의 새로운 소식을 알려드립니다</h1>
-
-            <span class="left">&lt;</span>
-            <span class="right">&gt;</span>
+            <h1>레고의 새로운 소식을 알려드립니다.</h1>
+                <button class="left">&lt;</button>
+                <button class="right">&gt;</button>
 
             <div id="rotating_news_wrap">
                 <ul class="slide">
@@ -603,13 +639,13 @@
                 </ul>
             </div>
 
-            <div class="small_news_box">
-                <img src="img/main/small_lego_new1.jpg" alt="작은 레고 뉴스">
-                <img src="img/main/small_lego_new2.jpg" alt="작은 레고 뉴스">
-                <img src="img/main/small_lego_new3.jpg" alt="작은 레고 뉴스">
+            <ul class="small_news_box">
+                <li><img src="img/main/small_lego_new1.jpg" alt="작은 레고 뉴스"></li>
+                <li><img src="img/main/small_lego_new2.jpg" alt="작은 레고 뉴스"></li>
+                <li><img src="img/main/small_lego_new3.jpg" alt="작은 레고 뉴스"></li>
                 <div class="black_background">
                 </div>
-            </div>
+            </ul>
         </div>
 
         <script>
@@ -619,12 +655,21 @@
                         $('.slide li:first').appendTo('.slide');
                             $('.slide').css({marginLeft:0});
                     });
+
+                    i++;
+                    if(i > $('.small_news_box li:last').index()){
+                        i = 0;
+                    }
+                    $('.small_news_box li img').eq(i).stop().fadeIn(1000);
+                    $('.small_news_box li img').eq(i-1).stop().fadeOut(1000);
+                    
+
                 }
 
                 function Left(){
                     $('.slide li:last').prependTo('.slide');
-                    $('.slide').css({marginLeft: -640});
-                    $('.slide').stop().animate({marginLeft: 0});
+                        $('.slide').css({marginLeft: -640});
+                            $('.slide').stop().animate({marginLeft: 0});
                 }
 
                 function Right(){
@@ -634,14 +679,38 @@
                     });            
                 }
 
+                var i = 0;
+
+                function Increase(){
+                    i++;
+                    if(i > $('.small_news_box li:last').index()){
+                        i = 0;
+                    }
+                    $('.small_news_box li img').eq(i).stop().fadeIn(1000);
+                    $('.small_news_box li img').eq(i-1).stop().fadeOut(1000);
+                }
+
+                function Decrease(){
+                    i--;
+                    if(i > $('.small_news_box li:last').index()){
+                        i = 0;
+                    }
+                    $('.small_news_box li img').eq(i).stop().fadeIn(1000);
+                    $('.small_news_box li img').eq(i+1).stop().fadeOut(1000);
+                }
+
+
                 setInterval(Rotating_News, 4000);
 
                 $('.left').click(function(){
                     Left();
+                    Decrease();
+
                 });
 
                 $('.right').click(function(){
                     Right();
+                    Increase();
                 });
             });
         </script>
@@ -690,6 +759,60 @@
             });
         </script>
 
+<script>
+    const opt = {
+        scrollGauge: 0,
+        bodyClass: document.querySelector('div.body'),
+        section: document.getElementsByClassName('section'),
+        sectionHeight() {
+            return this.section[0].clientHeight
+        },
+        maxValue() {
+            return (this.section.length - 1) * this.sectionHeight()
+        },
+        currentSection() {
+            return parseInt(opt.scrollGauge / opt.sectionHeight())
+        },
+        limitValidate() {
+            if (this.scrollGauge < 0) this.scrollGauge = 0;
+            else if (this.scrollGauge > this.maxValue()) this.scrollGauge = this.maxValue();
+        },
+        applyHeightValue(elem, idx, value) {
+            elem.style.bottom = -(this.sectionHeight() * idx) + value + 'px'
+        },
+        initialTopValue(value) {
+            [...this.section].forEach((elem, idx) => this.applyHeightValue(elem, idx, value))
+        },
+        scrollValue(value) {
+            return this.sectionHeight() * value
+        },
+        controlSections(value) {
+            this.initialTopValue(this.scrollValue(value));
+        },
+        changeSection(val) {
+            return (opt.currentSection() - val) * opt.sectionHeight();
+        },
+        moveSectionWithinLimit() {
+            this.limitValidate();
+            this.controlSections(this.currentSection());
+        }
+    }
+    let scrollHandler;
+    scrollHandler = function (e) {
+        if (!e.target.closest('div.body')) return;
+        opt.scrollGauge += e.deltaY;
+        opt.moveSectionWithinLimit();
+    }
+    opt.initialTopValue(opt.currentSection());
+    window.addEventListener('wheel', scrollHandler);
+    document.querySelector('div.body').addEventListener('mouseenter', e => {
+        document.body.classList.add('noscroll');
+    });
+    document.querySelector('div.body').addEventListener('mouseleave', e => {
+        document.body.classList.remove('noscroll');
+    });
+</script>
+
         <footer>
             <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo2.png" alt="레고 로고" class="lego_logo2"></a>
             <ul>
@@ -708,6 +831,7 @@
             <button>전국 상점 바로가기 +</button>
             <p>COPYRIGHT© Lego ALL RIGHTS RESERVED</p>
         </footer>
+
     </div>
 </body>
 </html>
