@@ -49,8 +49,9 @@
 
 
 
-        .swiper { width: 100%; height: 100%; }
-        /* #slider .swiper_wrap { width: 300%; height: 100%; position: relative; display: flex; } */
+        .swiper { width: 100%; height: 100%; position: relative; }
+        /* .swiper .swiper_black_background { position: absolute; width: 100%; height: 100%; background: rgb(0, 0, 0, 0.5); top: 0; left: 0; z-index: 10; } */
+
 
         .swiper-slide {
             text-align: center;
@@ -97,13 +98,13 @@
         .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
         .slide_image1 li img { width: 300px; }
 
-        #slider_wrap .slide_image2 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        .slide_image1 li img { width: 300px; }
+        #slider_wrap .slide_image2 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
+        .slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image2 li img { width: 300px; }
 
-        #slider_wrap .slide_image3 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        .slide_image1 li img { height: 300px; }
+        #slider_wrap .slide_image3 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
+        .slide_image3 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image3 li img { height: 300px; }
 
         #slider_wrap .image_wrap, .image_wrap2, .image_wrap3 { width: 100%; height: 100%; text-align: center; }
         .image_wrap, .image_wrap2, .image_wrap3 img { vertical-align: middle; }
@@ -151,29 +152,43 @@
         .left:hover { color: #666; }
         .right:hover { color: #666; }
 
-        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: 17.7%; left: 67.5%;  }
+        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: 19.5%; left: 67.5%;  }
         .small_news_box .black_background { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.35); }
 
         #section4 { width: 100%; height: 800px; }
-        #section4 #employment_container { width: 100%; height: 800px; position: relative; display: flex; overflow: hidden; }
-        #section4 .employ_box { width: 50%; height: 100%; background-image: url(img/main/lego_employ1.jpg); cursor: pointer; position: relative; }
-        #section4 .shop_box { width: 50%; height: 100%; background-image: url(img/main/lego_shop1.jpg); cursor: pointer; position: relative; }
+        #section4 #employment_container { width: 100%; height: 800px; position: relative; display: flex; overflow: hidden; flex-wrap: nowrap; }
+        #section4 .employ_box { width: 50%; height: 100%; cursor: pointer; position: relative; }
+        #section4 .shop_box { width: 50%; height: 100%; cursor: pointer; position: relative; }
         #section4 .black_background2, .black_background3 { display: none; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; z-index: 10; }
-        #section4 .visible_image1, .visible_image2 { transition: all 1s ease; }
-        #section4 .hidden_image1, .hidden_image2 { display: none; transition: all 1s ease; }
+        #section4 .visible_image1, .visible_image2 { position: absolute; top: 0; left: 0; }
+        #section4 .hidden_image1, .hidden_image2 { display: none;  }
 
         footer { width: 100%; height: 200px; background-color: #222; color: #fff; }
-        footer .lego_logo2 { float: left; }
-        footer ul:nth-of-type(1) { display: flex; width: 35%; justify-content: space-between;}
-        footer ul:nth-of-type(2) { display: flex; width: 13.5%; justify-content: space-between;}
-        footer button:nth-of-type(1) { width: 135px; height: 35px; background-color: rgb(165, 165, 165); color: #fff; cursor: pointer; }
-        footer button:nth-of-type(1):hover { background-color: rgb(140, 140, 140); }
+        footer .lego_logo2 {  }
+    
+        footer #footer_container1 { width: 47%; display: flex; justify-content: space-between; flex-wrap: nowrap; }
+        #footer_container1 ul li { float: left; }
+        #footer_container1 button:nth-of-type(1) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer; }
+        #footer_container1 button:nth-of-type(1):hover { border-color: lightgray; color: lightgray}
 
-        footer button:nth-of-type(2) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer; }
-        footer button:nth-of-type(2):hover { border-color: lightgray; color: lightgray}
+        footer #footer_container2 { width: 75%; display: flex; justify-content: center; }
+        #footer_container2 ul li { float: right; margin-right: 7.5%; }
+        #footer_container2 button { width: 135px; height: 35px; background-color: rgb(165, 165, 165); color: #fff; cursor: pointer; }
+        #footer_container2 button:hover { background-color: rgb(140, 140, 140); }
 
-        /* #section_wrap { position: relative; overflow: hidden; }
-        #section_wrap section { position: absolute; transition: 500ms cubic-bezier(1, 0, 0, 1); } */
+
+        .scroll_event { opacity: 0; transition: all .5s ease; }
+        .scroll_up { transform: translate(0, 100px); }
+        .scroll_down { transform: translate(0, -100px); }
+        .scroll_right { transform: translate(-100px, 0); }
+        .scroll_left { transform: translate(100px, 0); }
+        .scroll_rotateL { transform: rotate(180deg); }
+        .scroll_rotateR { transform: rotate(-180deg);}
+        .scroll_scaleUp { transform: scale(.5); }
+        .scroll_scaleDown { transform: scale(1.5); }
+        .scroll_event.show { opacity: 1; transform: none; }
+
+
 
     </style>
 </head>
@@ -204,6 +219,7 @@
                     <img src="img/main/main_image3.jpg" alt="메인 슬라이드 이미지">
                 </div>
             </div>
+            <div class="swiper_black_background"></div>
         </div>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
@@ -234,40 +250,40 @@
                 더 빨리 이용할수있는 기회
                 </h1>
             <div id="video_space">
-                <video src="img/main/lego_video.mp4" loop muted autoplay controls></video>
+                <video src="img/main/lego_video.mp4" loop muted autoplay controls class="scroll_event scroll_up"></video>
             </div>
             <div id="border_buttons">
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/new_product.png" alt="신제품 아이콘"></a>
-                    <p>신제품</p>
+                    <a href="#"><img src="img/main/new_product.png" alt="신제품 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">신제품</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/exclusive_product.png" alt="독점제품 아이콘"></a>
-                    <p>독점제품</p>
+                    <a href="#"><img src="img/main/exclusive_product.png" alt="독점제품 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">독점제품</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/event.png" alt="이벤트 아이콘"></a>
-                    <p>행사</p>
+                    <a href="#"><img src="img/main/event.png" alt="이벤트 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">행사</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/nerd.png" alt="어른이 아이콘"></a>
-                    <p>어른이 환영</p>
+                    <a href="#"><img src="img/main/nerd.png" alt="어른이 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">어른이 환영</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/rare_product.png" alt="희귀제품 아이콘"></a>
-                    <p>레어제품</p>
+                    <a href="#"><img src="img/main/rare_product.png" alt="희귀제품 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">레어제품</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/popular_product.png" alt="인기제품 아이콘"></a>
-                    <p>인기제품</p>
+                    <a href="#"><img src="img/main/popular_product.png" alt="인기제품 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">인기제품</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/movie.png" alt="영화 아이콘"></a>
-                    <p>영화</p>
+                    <a href="#"><img src="img/main/movie.png" alt="영화 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">영화</p>
                 </div>
                 <div class="button_boxs">
-                    <a href="#"><img src="img/main/membership.png" alt="회원혜택 아이콘"></a>
-                    <p>회원혜택</p>
+                    <a href="#"><img src="img/main/membership.png" alt="회원혜택 아이콘" class="scroll_event scroll_up"></a>
+                    <p class="scroll_event scroll_up">회원혜택</p>
                 </div>
             </div>
             
@@ -311,49 +327,49 @@
             
             <div id="slider_wrap">
                 <ul class="slide_image1">
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series1.jpg" alt="레고 스타워즈 시리즈">
                             <p class="hidden_text4">스타워즈 시리즈</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series2.png" alt="레고 스타워즈 시리즈">
                             <p class="hidden_text4">스타워즈 시리즈</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series3.png" alt="레고 마리오 시리즈">
                             <p class="hidden_text4">마리오 시리즈</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series4.jpg" alt="레고 마리오 시리즈">
                             <p class="hidden_text4">마리오 시리즈</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series5.jpg" alt="레고 닌자고 시리즈">
                             <p class="hidden_text4">닌자고 시리즈</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series6.jpg" alt="레고 닌자고 시리즈">
                             <p class="hidden_text4">닌자고 시리즈</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series7.jpg" alt="레고 마블 시리즈" class="toggle_image1">
                             <p class="hidden_text4">마블 시리즈</p>
                         </div>
                         </li>
-                    <li>
+                    <li class="scroll_event scroll_left">
                         <div class="image_wrap">
                             <img src="img/main/series8.jpg" alt="레고 마블 시리즈" class="toggle_image1">
                             <p class="hidden_text4">마블 시리즈</p>
@@ -470,17 +486,6 @@
         </div>
 
         
-
-        <!-- <script>
-            var slider = document.getElementById('slider');
-
-            noUiSlider.create(slider, {
-                start: [0],
-                connect: true,
-                range: { 'min': 0, 'max': 100 }
-            });
-        </script> -->
-
         <script>
             let Slider = document.querySelector("#slider_wrap")
             let innerSlider1 = document.querySelector(".slide_image1")
@@ -554,6 +559,9 @@
 
         <script>
             $(document).ready(function(){
+                $(".slide_image2, .slide_image3").hide();
+
+
                 $(".product_menu1").click(function(){
                     $(".slide_image1").fadeIn(1000);
                     $(".slide_image2, .slide_image3").fadeOut(1000);
@@ -640,9 +648,9 @@
             </div>
 
             <ul class="small_news_box">
-                <li><img src="img/main/small_lego_new1.jpg" alt="작은 레고 뉴스"></li>
-                <li><img src="img/main/small_lego_new2.jpg" alt="작은 레고 뉴스"></li>
-                <li><img src="img/main/small_lego_new3.jpg" alt="작은 레고 뉴스"></li>
+                <li class="scroll_event scroll_rotateL"><img src="img/main/small_lego_new1.jpg" alt="작은 레고 뉴스"></li>
+                <li class="scroll_event scroll_rotateL"><img src="img/main/small_lego_new2.jpg" alt="작은 레고 뉴스"></li>
+                <li class="scroll_event scroll_rotateL"><img src="img/main/small_lego_new3.jpg" alt="작은 레고 뉴스"></li>
                 <div class="black_background">
                 </div>
             </ul>
@@ -738,8 +746,7 @@
                     $('.black_background2').fadeIn(750);
                     $('.visible_image1').fadeOut(550);
                     $('.hidden_image1').fadeIn(550);
-                });
-                $('.employ_box').mouseleave(function(){
+                }).mouseleave(function(){
                     $('.black_background2').fadeOut(750);
                     $('.hidden_image1').fadeOut(550);
                     $('.visible_image1').fadeIn(550);
@@ -749,86 +756,53 @@
                     $('.black_background3').fadeIn(750);
                     $('.visible_image2').fadeOut(550);
                     $('.hidden_image2').fadeIn(550);
-                });
-                $('.shop_box').mouseleave(function(){
+                }).mouseleave(function(){
                     $('.black_background3').fadeOut(750);
-                    $('.hidden.image2').fadeOut(550);
+                    $('.hidden_image2').fadeOut(550);
                     $('.visible_image2').fadeIn(550);
                 });
 
             });
         </script>
 
-<script>
-    const opt = {
-        scrollGauge: 0,
-        bodyClass: document.querySelector('div.body'),
-        section: document.getElementsByClassName('section'),
-        sectionHeight() {
-            return this.section[0].clientHeight
-        },
-        maxValue() {
-            return (this.section.length - 1) * this.sectionHeight()
-        },
-        currentSection() {
-            return parseInt(opt.scrollGauge / opt.sectionHeight())
-        },
-        limitValidate() {
-            if (this.scrollGauge < 0) this.scrollGauge = 0;
-            else if (this.scrollGauge > this.maxValue()) this.scrollGauge = this.maxValue();
-        },
-        applyHeightValue(elem, idx, value) {
-            elem.style.bottom = -(this.sectionHeight() * idx) + value + 'px'
-        },
-        initialTopValue(value) {
-            [...this.section].forEach((elem, idx) => this.applyHeightValue(elem, idx, value))
-        },
-        scrollValue(value) {
-            return this.sectionHeight() * value
-        },
-        controlSections(value) {
-            this.initialTopValue(this.scrollValue(value));
-        },
-        changeSection(val) {
-            return (opt.currentSection() - val) * opt.sectionHeight();
-        },
-        moveSectionWithinLimit() {
-            this.limitValidate();
-            this.controlSections(this.currentSection());
-        }
-    }
-    let scrollHandler;
-    scrollHandler = function (e) {
-        if (!e.target.closest('div.body')) return;
-        opt.scrollGauge += e.deltaY;
-        opt.moveSectionWithinLimit();
-    }
-    opt.initialTopValue(opt.currentSection());
-    window.addEventListener('wheel', scrollHandler);
-    document.querySelector('div.body').addEventListener('mouseenter', e => {
-        document.body.classList.add('noscroll');
-    });
-    document.querySelector('div.body').addEventListener('mouseleave', e => {
-        document.body.classList.remove('noscroll');
-    });
-</script>
+        <script>
+
+            const Scroll_move = 200;
+            const ScrollElementList1 = document.querySelectorAll('.scroll_event');
+
+            const Scroll_Animation = function() {
+            for(const element of ScrollElementList1){
+            if(!element.classList.contains('show')){
+              if(window.innerHeight > element.getBoundingClientRect().top + Scroll_move) {
+                element.classList.add('show');
+                                                }
+                                            }
+                                        }
+                                     }
+
+            window.addEventListener('load', Scroll_Animation);
+            window.addEventListener('scroll', Scroll_Animation);
+        </script>
 
         <footer>
             <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo2.png" alt="레고 로고" class="lego_logo2"></a>
-            <ul>
-                <a href="#"><li>서울특별시 동작구 보라매로3길 25 레고 5층</li></a>
-                <a href="#"><li>|</li></a>
-                <a href="#"><li>TEL: 02 525 3500</li></a>
-                <a href="#"><li>|</li></a>
-                <a href="#"><li>FAX: 02 525 3575</li></a>
-            </ul>
+            <div id="footer_container1">
+                <ul>
+                    <a href="#"><li>서울특별시 동작구 보라매로3길 25 레고 5층&emsp;|&emsp;</li></a>
+                    <a href="#"><li>TEL: 02 525 3500&emsp;|&emsp;</li></a>
+                    <a href="#"><li>FAX: 02 525 3575</li></a>
+                </ul>
             <button>개인정보처리방침</button>
-            <ul>
-                <a href="#"><li><img src="img/main/facebook_icon.png" alt="페이스북 이미지"></li></a>
-                <a href="#"><li><img src="img/main/instagram_icon.png" alt="인스타그램 이미지"></li></a>
-                <a href="#"><li><img src="img/main/pinterest_icon.png" alt="핀터레스트 이미지"></li></a>
-            </ul>
-            <button>전국 상점 바로가기 +</button>
+            </div>
+            <div id="footer_container2">
+                <ul>
+                    <a href="#"><li><img src="img/main/facebook_icon.png" alt="페이스북 이미지"></li></a>
+                    <a href="#"><li><img src="img/main/instagram_icon.png" alt="인스타그램 이미지"></li></a>
+                    <a href="#"><li><img src="img/main/pinterest_icon.png" alt="핀터레스트 이미지"></li></a>
+                </ul>
+                <button>전국 상점 바로가기 +</button>
+            </div>
+            
             <p>COPYRIGHT© Lego ALL RIGHTS RESERVED</p>
         </footer>
 
