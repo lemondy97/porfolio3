@@ -102,6 +102,10 @@
         .slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
         .slide_image2 li img { width: 300px; }
 
+        #section2 #section2_menu li a { color: #333; font-size: 25px; position: relative; transition: 0.5s; }
+        #section2_menu li a:hover::after { transform: scaleX(1); transform-origin: center; }
+        #section2_menu li a::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(0); transform-origin: left; }
+
         #slider_wrap .slide_image3 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
         .slide_image3 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
         .slide_image3 li img { height: 300px; }
@@ -135,12 +139,12 @@
         #section3 h1:nth-child(2) { font-family: 'Eoe_Zno_M'; font-size: 30px; text-align: center; padding-bottom: 3%; }
 
         #rotating_news_wrap { width: 640px; height: 425px; margin: 0 auto; position: relative; overflow: hidden;
-                              cursor: pointer; transition: all 1s ease; }
+                              cursor: pointer; }
         .slide { width: 1920px; height: 100%; }
         .slide li { width: 640px; height: 425px; float: left; }
         .siide li img { width: 100%; }
 
-        #rotating_news_wrap .news_image_wrap { width: 100%; height: 100%; }
+        #rotating_news_wrap .news_image_wrap { width: 100%; height: 100%; transform: translate(-500px, -100px); opacity: 0; transition: all 1s ease; }
         #rotating_news_wrap .news_image { vertical-align: bottom; }
 
         
@@ -152,13 +156,14 @@
         .left:hover { color: #666; }
         .right:hover { color: #666; }
 
-        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: 19.5%; left: 67.5%;  }
+        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: 19.5%; left: 67.5%; 
+                                    opacity: 0; transition: all 1s ease; transform: translate(-500px, -100px);  }
         .small_news_box .black_background { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.35); }
 
         #section4 { width: 100%; height: 800px; }
         #section4 #employment_container { width: 100%; height: 800px; position: relative; display: flex; overflow: hidden; flex-wrap: nowrap; }
-        #section4 .employ_box { width: 50%; height: 100%; cursor: pointer; position: relative; }
-        #section4 .shop_box { width: 50%; height: 100%; cursor: pointer; position: relative; }
+        #section4 .employ_box { width: 50%; height: 100%; cursor: pointer; position: relative; transform: translate(300px, -100px); transition: all 1s; opacity: 0; }
+        #section4 .shop_box { width: 50%; height: 100%; cursor: pointer; position: relative; transform: translate(300px, -100px); transition: all 1s; opacity: 0; }
         #section4 .black_background2, .black_background3 { display: none; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; z-index: 10; }
         #section4 .visible_image1, .visible_image2 { position: absolute; top: 0; left: 0; }
         #section4 .hidden_image1, .hidden_image2 { display: none;  }
@@ -177,7 +182,7 @@
         #footer_container2 button:hover { background-color: rgb(140, 140, 140); }
 
 
-        .scroll_event { opacity: 0; transition: all .5s ease; }
+        .scroll_event { opacity: 0; transition: all 0.75s ease; }
         .scroll_up { transform: translate(0, 100px); }
         .scroll_down { transform: translate(0, -100px); }
         .scroll_right { transform: translate(-100px, 0); }
@@ -292,10 +297,10 @@
         <div id="section2">
                 <p>추천제품</p>
                 <h1>가장 많이 고객분들께서<br> 선택하신 제품들입니다.</h1>
-            <ul>
-               <li class="product_menu1">시리즈별</li>
-               <li class="product_menu2">연령별</li>
-               <li class="product_menu3">가격별</li> 
+            <ul id="section2_menu">
+               <li><a class="product_menu1">시리즈별</a></li>
+               <li><a class="product_menu2">연령별</a></li>
+               <li><a class="product_menu3">가격별</a></li> 
             </ul>
 
             <div id="logo_hover_container">
@@ -563,28 +568,28 @@
 
 
                 $(".product_menu1").click(function(){
-                    $(".slide_image1").fadeIn(1000);
-                    $(".slide_image2, .slide_image3").fadeOut(1000);
-                    $(".hidden_text4").fadeIn(1000);
-                    $(".hidden_text5, .hidden_text6").fadeOut(1000);
-                    $(".logo_hover_box1").fadeIn(1000);
-                    $(".logo_hover_box2, .logo_hover_box3").fadeOut(1000);
+                    $(".slide_image1").stop().fadeIn(1000);
+                    $(".slide_image2, .slide_image3").stop().fadeOut(1000);
+                    $(".hidden_text4").stop().fadeIn(1000);
+                    $(".hidden_text5, .hidden_text6").stop().fadeOut(1000);
+                    $(".logo_hover_box1").stop().fadeIn(1000);
+                    $(".logo_hover_box2, .logo_hover_box3").stop().fadeOut(1000);
                 });
                 $(".product_menu2").click(function(){
-                    $(".slide_image2").fadeIn(1000);
-                    $(".slide_image1, .slide_image3").fadeOut(1000);
-                    $(".hidden_text5").fadeIn(1000);
-                    $(".hidden_text4, .hidden_text6").fadeOut(1000);
-                    $(".logo_hover_box2").fadeIn(1000);
-                    $(".logo_hover_box1, .logo_hover_box3").fadeOut(1000);
+                    $(".slide_image2").stop().fadeIn(1000);
+                    $(".slide_image1, .slide_image3").stop().fadeOut(1000);
+                    $(".hidden_text5").stop().fadeIn(1000);
+                    $(".hidden_text4, .hidden_text6").stop().fadeOut(1000);
+                    $(".logo_hover_box2").stop().fadeIn(1000);
+                    $(".logo_hover_box1, .logo_hover_box3").stop().fadeOut(1000);
                 });
                 $(".product_menu3").click(function(){
-                    $(".slide_image3").fadeIn(1000);
-                    $(".slide_image1, .slide_image2").fadeOut(1000);
-                    $(".hidden_text6").fadeIn(1000);
-                    $(".hidden_text4, .hidden_text5").fadeOut(1000);
-                    $(".logo_hover_box3").fadeIn(1000);
-                    $(".logo_hover_box1, .logo_hover_box2").fadeOut(1000);
+                    $(".slide_image3").stop().fadeIn(1000);
+                    $(".slide_image1, .slide_image2").stop().fadeOut(1000);
+                    $(".hidden_text6").stop().fadeIn(1000);
+                    $(".hidden_text4, .hidden_text5").stop().fadeOut(1000);
+                    $(".logo_hover_box3").stop().fadeIn(1000);
+                    $(".logo_hover_box1, .logo_hover_box2").stop().fadeOut(1000);
                 });
             });
         </script>
@@ -593,30 +598,30 @@
             $(document).ready(function(){
                 $(".logo_hover_box1").mouseenter(function(){
                     $(this).css('background-image', 'url()');
-                    $(".hidden_text1").fadeIn("fast");
-                    $(".hidden_text2, .hidden_text3").fadeOut("fast");
+                    $(".hidden_text1").stop().fadeIn(1000);
+                    $(".hidden_text2, .hidden_text3").stop().fadeOut(1000);
                 });
                 $(".logo_hover_box1").mouseleave(function(){
                     $(this).css('background-image', 'url(img/main/lego_hover1.png)')
-                    $(".hidden_text1").fadeOut("fast");
+                    $(".hidden_text1").stop().fadeOut(1000);
                 });
                 $(".logo_hover_box2").mouseenter(function(){
                     $(this).css('background-image', 'url()');
-                    $(".hidden_text2").fadeIn("fast");
-                    $(".hidden_text1, .hidden_text3").fadeOut("fast");
+                    $(".hidden_text2").stop().fadeIn(1000);
+                    $(".hidden_text1, .hidden_text3").stop().fadeOut(1000);
                 });
                 $(".logo_hover_box2").mouseleave(function(){
                     $(this).css('background-image', 'url(img/main/lego_hover2.jpg)')
-                    $(".hidden_text2").fadeOut("fast");
+                    $(".hidden_text2").stop().fadeOut(1000);
                 });
                 $(".logo_hover_box3").mouseenter(function(){
                     $(this).css('background-image', 'url()');
-                    $(".hidden_text3").fadeIn("fast");
-                    $(".hidden_text1, .hidden_text2").fadeOut("fast");
+                    $(".hidden_text3").stop().fadeIn(1000);
+                    $(".hidden_text1, .hidden_text2").stop().fadeOut(1000);
                 });
                 $(".logo_hover_box3").mouseleave(function(){
                     $(this).css('background-image', 'url(img/main/lego_hover3.jpg)')
-                    $(".hidden_text3").fadeOut("fast");
+                    $(".hidden_text3").stop().fadeOut(1000);
                 });
             });
         </script>
@@ -648,9 +653,9 @@
             </div>
 
             <ul class="small_news_box">
-                <li class="scroll_event scroll_rotateL"><img src="img/main/small_lego_new1.jpg" alt="작은 레고 뉴스"></li>
-                <li class="scroll_event scroll_rotateL"><img src="img/main/small_lego_new2.jpg" alt="작은 레고 뉴스"></li>
-                <li class="scroll_event scroll_rotateL"><img src="img/main/small_lego_new3.jpg" alt="작은 레고 뉴스"></li>
+                <li><img src="img/main/small_lego_new1.jpg" alt="작은 레고 뉴스"></li>
+                <li><img src="img/main/small_lego_new2.jpg" alt="작은 레고 뉴스"></li>
+                <li><img src="img/main/small_lego_new3.jpg" alt="작은 레고 뉴스"></li>
                 <div class="black_background">
                 </div>
             </ul>
@@ -743,23 +748,23 @@
         <script>
             $(document).ready(function(){
                 $('.employ_box').mouseenter(function(){
-                    $('.black_background2').fadeIn(750);
-                    $('.visible_image1').fadeOut(550);
-                    $('.hidden_image1').fadeIn(550);
+                    $('.black_background2').stop().fadeIn(750);
+                    $('.visible_image1').stop().fadeOut(550);
+                    $('.hidden_image1').stop().fadeIn(550);
                 }).mouseleave(function(){
-                    $('.black_background2').fadeOut(750);
-                    $('.hidden_image1').fadeOut(550);
-                    $('.visible_image1').fadeIn(550);
+                    $('.black_background2').stop().fadeOut(750);
+                    $('.hidden_image1').stop().fadeOut(550);
+                    $('.visible_image1').stop().fadeIn(550);
                 });
 
                 $('.shop_box').mouseenter(function(){
-                    $('.black_background3').fadeIn(750);
-                    $('.visible_image2').fadeOut(550);
-                    $('.hidden_image2').fadeIn(550);
+                    $('.black_background3').stop().fadeIn(750);
+                    $('.visible_image2').stop().fadeOut(550);
+                    $('.hidden_image2').stop().fadeIn(550);
                 }).mouseleave(function(){
-                    $('.black_background3').fadeOut(750);
-                    $('.hidden_image2').fadeOut(550);
-                    $('.visible_image2').fadeIn(550);
+                    $('.black_background3').stop().fadeOut(750);
+                    $('.hidden_image2').stop().fadeOut(550);
+                    $('.visible_image2').stop().fadeIn(550);
                 });
 
             });
@@ -782,6 +787,30 @@
 
             window.addEventListener('load', Scroll_Animation);
             window.addEventListener('scroll', Scroll_Animation);
+        </script>
+
+        <script>
+            $(function(){
+                $(window).scroll(function(){
+                    var ws = $(this).scrollTop();
+                    var section3_box1 = $('.news_image_wrap').offset().top;
+                    var section3_box2 = $('.small_news_box').offset().top;
+                    var section4_box1 = $('.employ_box').offset().top;
+                    var section4_box2 = $('.shop_box').offset().top;
+                    if(ws > section3_box1 - 700){
+                        $('.news_image_wrap').css("transform", "translate(0px, 0px)").css("opacity", "1");
+                    }
+                    if(ws > section3_box2 - 700){
+                        $('.small_news_box').css("transform", "translate(0px, 0px)").css("opacity", "1");
+                    }
+                    if(ws > section4_box1 - 700){
+                        $('.employ_box').css("transform", "translate(0px, 0px)").css("opacity", "1");
+                    }
+                    if(ws > section4_box2 - 700){
+                        $('.shop_box').css("transform", "translate(0px, 0px)").css("opacity", "1");
+                    }
+                });
+            });
         </script>
 
         <footer>
