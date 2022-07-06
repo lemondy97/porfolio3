@@ -49,8 +49,16 @@
 
 
 
-        .swiper { width: 100%; height: 100%; position: relative; }
-        /* .swiper .swiper_black_background { position: absolute; width: 100%; height: 100%; background: rgb(0, 0, 0, 0.5); top: 0; left: 0; z-index: 10; } */
+        .swiper { width: 100%; height: 100%; position: relative; font-family: 'Eoe_Zno_M' }
+        .swiper_text1 h1 { font-size: 50px; }
+        .swiper_text2 h1 { font-size: 50px; }
+        .swiper_text3 h1 { font-size: 50px; }
+        .swiper_text1 p { font-size: 27px; }
+        .swiper_text2 p { font-size: 27px; }
+        .swiper_text3 p { font-size: 27px; }
+        .swiper .swiper_text1 { width: 22%; transition: all 0.5s ease; position: absolute; top: 50px; right: -415px; z-index: 10; opacity: 1; }
+        .swiper .swiper_text2 { width: 37%; transition: all 0.5s ease; position: absolute; top: -275px; left: 360px; z-index: 10; opacity: 1; }
+        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -275px; left: 120px; z-index: 10; opacity: 1; }
 
 
         .swiper-slide {
@@ -102,9 +110,9 @@
         .slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
         .slide_image2 li img { width: 300px; }
 
-        #section2 #section2_menu li a { color: #333; font-size: 25px; position: relative; transition: 0.5s; }
-        #section2_menu li a:hover::after { transform: scaleX(1); transform-origin: center; }
-        #section2_menu li a::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(0); transform-origin: left; }
+        #section2 #section2_menu li { color: #333; font-size: 25px; position: relative; transition: 0.5s; }
+        #section2_menu li:hover::after { transform: scaleX(1); transform-origin: center; }
+        #section2_menu li::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(0); transform-origin: left; }
 
         #slider_wrap .slide_image3 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
         .slide_image3 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
@@ -168,18 +176,31 @@
         #section4 .visible_image1, .visible_image2 { position: absolute; top: 0; left: 0; }
         #section4 .hidden_image1, .hidden_image2 { display: none;  }
 
+        .employ_box > .employ_icon_box { opacity: 0; width: 100%; height: 100%; transition: all 1s ease; position: absolute; top: 50%; left: 50%; z-index: 15; color: #fff; 
+                                         font-size: 18px; font-family: 'Minguk-Regular'; }
+        .shop_box > .shop_icon_box { opacity: 0; width: 100%; height: 100%; transition: all 1s ease; position: absolute; top: 50%; left: 50%; z-index: 15; color: #fff; 
+                                     font-size: 18px; font-family: 'Minguk-Regular'; }
+        .employ_icon_box img, .shop_icon_box img { vertical-align: middle; cursor: pointer; }
+        .employ_box:hover > .employ_icon_box { opacity: 1; }
+        .shop_box:hover > .shop_icon_box { opacity: 1; }
+
+        .section4_title1 { color: #fff; font-size: 30px; font-family: 'Eoe_Zno_M'; position: absolute; top: 4.5%; left: 46%; z-index: 20; }
+        .section4_title2 { color: #fff; font-size: 30px; font-family: 'Eoe_Zno_M'; position: absolute; top: 4.5%; left: 42%; z-index: 20; }
+
         footer { width: 100%; height: 200px; background-color: #222; color: #fff; }
-        footer .lego_logo2 {  }
+        footer .lego_logo2 { margin: 2.5% 0 0 2%; }
     
         footer #footer_container1 { width: 47%; display: flex; justify-content: space-between; flex-wrap: nowrap; }
         #footer_container1 ul li { float: left; }
-        #footer_container1 button:nth-of-type(1) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer; }
-        #footer_container1 button:nth-of-type(1):hover { border-color: lightgray; color: lightgray}
 
-        footer #footer_container2 { width: 75%; display: flex; justify-content: center; }
-        #footer_container2 ul li { float: right; margin-right: 7.5%; }
-        #footer_container2 button { width: 135px; height: 35px; background-color: rgb(165, 165, 165); color: #fff; cursor: pointer; }
-        #footer_container2 button:hover { background-color: rgb(140, 140, 140); }
+        #footer_container1 button { width: 135px; height: 35px; background-color: rgb(165, 165, 165); color: #fff; cursor: pointer; }
+        #footer_container1 button:hover { background-color: rgb(140, 140, 140); }
+
+        footer #footer_container2 { width: 50%; display: flex; justify-content: space-between; flex-wrap: nowrap; }
+        #footer_container2 ul li { float: left; margin-right: 7.5%; }
+        #footer_container2 button:nth-of-type(1) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer; }
+        #footer_container2 button:nth-of-type(1):hover { border-color: lightgray; color: lightgray}
+
 
 
         .scroll_event { opacity: 0; transition: all 0.75s ease; }
@@ -216,15 +237,29 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="img/main/main_image1.jpg" alt="메인 슬라이드 이미지">
+                    <div class="swiper_text1">
+                        <h1>미래의 건설자에게 영감을 주며 즐기십시오!</h1>
+                        <p>여러분의 즐거운 놀이 생활을 위해 저희가 도움을 드립니다.</p>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/main/main_image2.jpg" alt="메인 슬라이드 이미지">
+                    <div class="swiper_text2">
+                        <h1>새로운 조립 아이디어를 찾고 있나요?</h1>
+                        <p>더 이상 헤매지 마세요. 특별한 레고 플레이 카드를 찾으세요!</p>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/main/main_image3.jpg" alt="메인 슬라이드 이미지">
+                    <div class="swiper_text3">
+                        <h1>세상을 놀이터로 만드세요!</h1>
+                        <p>놀이! 레고의 가장 근원적인 밑바탕이 바로 놀이의 마법 아니겠어요!</p>
+                    </div>
                 </div>
             </div>
-            <div class="swiper_black_background"></div>
+
+
+
         </div>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
@@ -245,6 +280,20 @@
               },
             });
       
+          </script>
+
+          <script>
+            $(document).ready(function(){
+                function AppearText() {
+                    $(".swiper_text1").delay(200).animate({opacity:1, right: 135}, 500);
+                    $(".swiper_text2").delay(3500).animate({opacity:1, top: 60}, 500);
+                    $(".swiper_text3").delay(8000).animate({opacity:1, top: 150}, 500);
+                
+                }
+                setInterval(AppearText, 2000);
+            });
+
+             
           </script>
 
     
@@ -298,9 +347,9 @@
                 <p>추천제품</p>
                 <h1>가장 많이 고객분들께서<br> 선택하신 제품들입니다.</h1>
             <ul id="section2_menu">
-               <li><a class="product_menu1">시리즈별</a></li>
-               <li><a class="product_menu2">연령별</a></li>
-               <li><a class="product_menu3">가격별</a></li> 
+               <li class="product_menu1">시리즈별</li>
+               <li class="product_menu2">연령별</li>
+               <li class="product_menu3">가격별</li> 
             </ul>
 
             <div id="logo_hover_container">
@@ -731,15 +780,25 @@
         <div id="section4">
             <div id="employment_container">
                 <div class="employ_box">
+                    <h1 class="section4_title1">채용 안내</h1>
                     <img src="img/main/lego_employ1.jpg" alt="레고 채용 사진" class="visible_image1">
                     <img src="img/main/lego_employ2.jpg" alt="레고 채용 사진" class="hidden_image1">
                     <div class="black_background2">
                     </div>
+                    <div class="employ_icon_box">
+                        <a href="#"><img src="img/main/employ_icon.png" alt="고용 아이콘"></a>
+                        <p>&emsp;&emsp;채용 공지<br>&emsp;&emsp;알아보기</p>
+                    </div>
                 </div>
                 <div class="shop_box">
+                    <h1 class="section4_title2">상점 방침 안내</h1>
                     <img src="img/main/lego_shop1.jpg" alt="레고 상점 사진" class="visible_image2">
                     <img src="img/main/lego_shop2.jpg" alt="레고 상점 사진" class="hidden_image2">
                     <div class="black_background3">
+                    </div>
+                    <div class="shop_icon_box">
+                        <a href="#"><img src="img/main/shop_icon.png" alt="상점 아이콘"></a>
+                        <p>&emsp;&emsp;&emsp;&ensp;상점 방침<br>&emsp;&emsp;&emsp;&ensp;알아보기</p>
                     </div>
                 </div>
             </div>
