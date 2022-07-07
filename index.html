@@ -10,213 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/common.css">
     
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 
-    <style>
-        * { margin: 0; padding: 0; }
-        body {  position: relative; }
-        ul, ol, li { list-style: none;  }
-        a { text-decoration: none; }
-
-        @font-face {
-        font-family: 'Minguk-Regular';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-
-
-        @font-face {
-        font-family: 'Eoe_Zno_M';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_M.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-
-        #wrap { width: 100%; height: auto; overflow-x: hidden; }
-        .blank_space1 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: left }
-        .blank_space2 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: right }
-
-
-        footer a { color: #fff; }
-
-        header { width: 1303px; height: 75px; margin: 0 auto; background-color: rgb(255, 207, 0); }
-        header img { float: left; }
-        header ul { width: 70%; height: 100%; display: flex; justify-content: space-around; }
-        header ul > li { font-size: 22px; line-height: 65px; font-weight: 500; }
-        header ul > li > a { color: #333; font-family: 'Shippori Mincho', serif; color: #555; }
-
-
-
-        .swiper { width: 100%; height: 100%; position: relative; font-family: 'Eoe_Zno_M' }
-        .swiper_text1 h1 { font-size: 50px; }
-        .swiper_text2 h1 { font-size: 50px; }
-        .swiper_text3 h1 { font-size: 50px; }
-        .swiper_text1 p { font-size: 27px; }
-        .swiper_text2 p { font-size: 27px; }
-        .swiper_text3 p { font-size: 27px; }
-        .swiper .swiper_text1 { width: 22%; transition: all 0.5s ease; position: absolute; top: 50px; right: -415px; z-index: 10; opacity: 1; }
-        .swiper .swiper_text2 { width: 37%; transition: all 0.5s ease; position: absolute; top: -275px; left: 360px; z-index: 10; opacity: 1; }
-        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -275px; left: 120px; z-index: 10; opacity: 1; }
-
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-
-        .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
-
-        section { width: 100%; height: 950px; background-color: rgb(14, 114, 182); color: #fff; }
-
-        section p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
-        section h1 { text-align: center; font-size: 30px; font-family: 'Eoe_Zno_M'; padding-bottom: 3%; }
-        
-
-        section #video_space { width: 1000px; height: 562.5px; margin: 0 auto; }
-        #video_space video { width: 100%; height: auto; }
-        section #border_buttons { width: 1000px; height: 125px; margin: 0 auto; background-color: rgb(35, 135, 194); display: flex; justify-content: space-between; }
-        #border_buttons img { vertical-align: middle; }
-        #border_buttons .button_boxs { width: 125px; border-right: 1.5px solid #111; text-align: center; font-family: 'Minguk-Regular'; }
-
-        #section2 { width: 100%; height: 750px; position: relative; }
-        #section2 p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
-        #section2 h1:nth-child(2) { font-family: 'Eoe_Zno_M'; font-size: 30px; text-align: center; padding-bottom: 3%; }
-
-        #section2 > ul:nth-of-type(1) { width: 500px; height: 5%; margin: 0 auto; padding-left: 14%; display: flex; justify-content: space-around; }
-        #section2 ul li { font-size: 25px; cursor: pointer; font-family: 'Eoe_Zno_M'; }
-
-        #section2 #slider_wrap { float: left;  white-space: nowrap; width: 1000px; height: 500px; margin-top: 2.5%; margin-left: calc(382px + 6%); overflow: hidden; position: relative; }
-        #slider_wrap .slide_image1 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        .slide_image1 li img { width: 300px; }
-
-        #slider_wrap .slide_image2 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        .slide_image2 li img { width: 300px; }
-
-        #section2 #section2_menu li { color: #333; font-size: 25px; position: relative; transition: 0.5s; }
-        #section2_menu li:hover::after { transform: scaleX(1); transform-origin: center; }
-        #section2_menu li::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(0); transform-origin: left; }
-
-        #slider_wrap .slide_image3 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image3 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
-        .slide_image3 li img { height: 300px; }
-
-        #slider_wrap .image_wrap, .image_wrap2, .image_wrap3 { width: 100%; height: 100%; text-align: center; }
-        .image_wrap, .image_wrap2, .image_wrap3 img { vertical-align: middle; }
-
-
-        #section2 #logo_hover_container { position: relative; }
-        #logo_hover_container .logo_hover_box1 { background-image: url(img/main/lego_hover1.png); width: 382px; height: 300px; border: none; cursor: pointer;  background-repeat: no-repeat;
-                                                 margin-left: 3%; margin-right: 3%; transition: all ease 1s; border: 7.5px solid #ff0000; text-align: center; position: absolute; top: 0; left: 0; }
-        #logo_hover_container .logo_hover_box2 { display: none; background-image: url(img/main/lego_hover2.jpg); width: 382px; height: 300px; border: none; cursor: pointer; background-repeat: no-repeat; 
-                                                 margin-left: 3%; margin-right: 3%; transition: all ease 1s; border: 7.5px solid #0000FF; text-align: center; position: absolute; top: 0; left: 0; }
-        #logo_hover_container .logo_hover_box3 { display: none; background-image: url(img/main/lego_hover3.jpg); width: 382px; height: 300px; border: none; cursor: pointer; background-repeat: no-repeat; 
-                                                 margin-left: 3%; margin-right: 3%; transition: all ease 1s; border: 7.5px solid dodgerblue; text-align: center; position: absolute; top: 0; left: 0; }
-        .logo_hover_box1 h2, .logo_hover_box2 h2, .logo_hover_box3 h2 { margin-top: 5%; font-size: 33px; }
-        .logo_hover_box1 p, .logo_hover_box2 p, .logo_hover_box3 p { margin-top: 15%; width: fit-content; max-width: 382px; word-break: break-all; font-size: 24px; }
-
-        .logo_hover_box1 .hidden_text1 { display: none; font-family: 'Eoe_Zno_M';  }
-        .logo_hover_box2 .hidden_text2 { display: none; font-family: 'Eoe_Zno_M';  }
-        .logo_hover_box3 .hidden_text3 { display: none; font-family: 'Eoe_Zno_M';  }
-
-       #section2 .product_moving { font-size: 30px; font-family: 'Eoe_Zno_M'; color: coral; position: absolute; top: 85%; left: 43%; }
-
-       #section2 .hidden_text4 { font-family: 'Eoe_Zno_M'; }
-       #section2 .hidden_text5 { display: none; font-family: 'Eoe_Zno_M'; }
-       #section2 .hidden_text6 { display: none; font-family: 'Eoe_Zno_M'; }
-
-        #section3 { width: 100%; height: 725px; background-color: rgb(220, 220, 220); position: relative; }
-        #section3 p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
-        #section3 h1:nth-child(2) { font-family: 'Eoe_Zno_M'; font-size: 30px; text-align: center; padding-bottom: 3%; }
-
-        #rotating_news_wrap { width: 640px; height: 425px; margin: 0 auto; position: relative; overflow: hidden;
-                              cursor: pointer; }
-        .slide { width: 1920px; height: 100%; }
-        .slide li { width: 640px; height: 425px; float: left; }
-        .siide li img { width: 100%; }
-
-        #rotating_news_wrap .news_image_wrap { width: 100%; height: 100%; transform: translate(-500px, -100px); opacity: 0; transition: all 1s ease; }
-        #rotating_news_wrap .news_image { vertical-align: bottom; }
-
-        
-
-        .left { position: absolute; top: 85%; left: 49%; font-size: 62.5px; color: #222; line-height: 40px;
-                             cursor: pointer; transition: all 0.5s ease; transform: translate(-50%); }
-        .right { position: absolute; top: 85%; left: 51.5%; font-size: 62.55px; color: #222; line-height: 40px;
-                             cursor: pointer; transition: all 0.5s ease; transform: translate(-50%); }
-        .left:hover { color: #666; }
-        .right:hover { color: #666; }
-
-        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: 19.5%; left: 67.5%; 
-                                    opacity: 0; transition: all 1s ease; transform: translate(-500px, -100px);  }
-        .small_news_box .black_background { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.35); }
-
-        #section4 { width: 100%; height: 800px; }
-        #section4 #employment_container { width: 100%; height: 800px; position: relative; display: flex; overflow: hidden; flex-wrap: nowrap; }
-        #section4 .employ_box { width: 50%; height: 100%; cursor: pointer; position: relative; transform: translate(300px, -100px); transition: all 1s; opacity: 0; }
-        #section4 .shop_box { width: 50%; height: 100%; cursor: pointer; position: relative; transform: translate(300px, -100px); transition: all 1s; opacity: 0; }
-        #section4 .black_background2, .black_background3 { display: none; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; z-index: 10; }
-        #section4 .visible_image1, .visible_image2 { position: absolute; top: 0; left: 0; }
-        #section4 .hidden_image1, .hidden_image2 { display: none;  }
-
-        .employ_box > .employ_icon_box { opacity: 0; width: 100%; height: 100%; transition: all 1s ease; position: absolute; top: 50%; left: 50%; z-index: 15; color: #fff; 
-                                         font-size: 18px; font-family: 'Minguk-Regular'; }
-        .shop_box > .shop_icon_box { opacity: 0; width: 100%; height: 100%; transition: all 1s ease; position: absolute; top: 50%; left: 50%; z-index: 15; color: #fff; 
-                                     font-size: 18px; font-family: 'Minguk-Regular'; }
-        .employ_icon_box img, .shop_icon_box img { vertical-align: middle; cursor: pointer; }
-        .employ_box:hover > .employ_icon_box { opacity: 1; }
-        .shop_box:hover > .shop_icon_box { opacity: 1; }
-
-        .section4_title1 { color: #fff; font-size: 30px; font-family: 'Eoe_Zno_M'; position: absolute; top: 4.5%; left: 46%; z-index: 20; }
-        .section4_title2 { color: #fff; font-size: 30px; font-family: 'Eoe_Zno_M'; position: absolute; top: 4.5%; left: 42%; z-index: 20; }
-
-        footer { width: 100%; height: 200px; background-color: #222; color: #fff; }
-        footer .lego_logo2 { margin: 2.5% 0 0 2%; }
-    
-        footer #footer_container1 { width: 47%; display: flex; justify-content: space-between; flex-wrap: nowrap; }
-        #footer_container1 ul li { float: left; }
-
-        #footer_container1 button { width: 135px; height: 35px; background-color: rgb(165, 165, 165); color: #fff; cursor: pointer; }
-        #footer_container1 button:hover { background-color: rgb(140, 140, 140); }
-
-        footer #footer_container2 { width: 50%; display: flex; justify-content: space-between; flex-wrap: nowrap; }
-        #footer_container2 ul li { float: left; margin-right: 7.5%; }
-        #footer_container2 button:nth-of-type(1) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer; }
-        #footer_container2 button:nth-of-type(1):hover { border-color: lightgray; color: lightgray}
-
-
-
-        .scroll_event { opacity: 0; transition: all 0.75s ease; }
-        .scroll_up { transform: translate(0, 100px); }
-        .scroll_down { transform: translate(0, -100px); }
-        .scroll_right { transform: translate(-100px, 0); }
-        .scroll_left { transform: translate(100px, 0); }
-        .scroll_rotateL { transform: rotate(180deg); }
-        .scroll_rotateR { transform: rotate(-180deg);}
-        .scroll_scaleUp { transform: scale(.5); }
-        .scroll_scaleDown { transform: scale(1.5); }
-        .scroll_event.show { opacity: 1; transform: none; }
-
-
-
-    </style>
 </head>
 <body>
     <div id="wrap">
@@ -225,11 +23,11 @@
         <header>
             <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo.png" alt="레고 로고"></a>
             <ul>
-               <li><a href="#">Home</a></li> 
-               <li><a href="#">About</a></li> 
-               <li><a href="#">Our Brand</a></li> 
-               <li><a href="#">News</a></li> 
-               <li><a href="#">Contact</a></li> 
+               <li><a href="sub.html">Home</a></li> 
+               <li><a href="sub.html">About</a></li> 
+               <li><a href="sub.html">Out Brand</a></li> 
+               <li><a href="sub.html">Contact</a></li> 
+               <li><a href="sub.html">Career</a></li> 
             </ul>
         </header>
 
@@ -262,39 +60,8 @@
 
         </div>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper(".Swipe_control", {
-              spaceBetween: 0,
-              centeredSlides: true,
-              autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-              },
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
-              navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-              },
-            });
-      
-          </script>
-
-          <script>
-            $(document).ready(function(){
-                function AppearText() {
-                    $(".swiper_text1").delay(200).animate({opacity:1, right: 135}, 500);
-                    $(".swiper_text2").delay(3500).animate({opacity:1, top: 60}, 500);
-                    $(".swiper_text3").delay(8000).animate({opacity:1, top: 150}, 500);
-                
-                }
-                setInterval(AppearText, 2000);
-            });
-
-             
-          </script>
+        <script src="js/Main_Swiper.js"></script>
+        <script src="js/Appear_text.js"></script>
 
     
         <section>
@@ -540,140 +307,9 @@
         </div>
 
         
-        <script>
-            let Slider = document.querySelector("#slider_wrap")
-            let innerSlider1 = document.querySelector(".slide_image1")
-            let innerSlider2 = document.querySelector(".slide_image2")
-            let innerSlider3 = document.querySelector(".slide_image3")
-            let pressed = false;
-            let startx
-            let starty
-            let startz
-            let x
-
-            Slider.addEventListener("mousedown", e => {
-                pressed = true;
-                startx = e.offsetX - innerSlider1.offsetLeft;
-                starty = e.offsetX - innerSlider2.offsetLeft;
-                startz = e.offsetX - innerSlider3.offsetLeft;
-                Slider.style.cursor = "grabbing";
-            });
-
-            Slider.addEventListener("mouseenter", () => {
-                Slider.style.cursor = "grab";
-            });
-
-            Slider.addEventListener("mouseup", () => {
-                Slider.style.cursor = "grab";
-            });
-
-            window.addEventListener("mouseup", () => {
-                pressed = false;
-            });
-
-            Slider.addEventListener("mousemove", e => {
-                if(!pressed) return
-                e.preventDefault()
-                x = e.offsetX
-
-                innerSlider1.style.left = `${x - startx}px`;
-                checkboundary();
-                innerSlider2.style.left = `${x - starty}px`;
-                checkboundary();
-                innerSlider3.style.left = `${x - startz}px`;
-                checkboundary();
-            });
-
-            function checkboundary(){
-                let outer = Slider.getBoundingClientRect();
-                let inner = innerSlider1.getBoundingClientRect()
-                let inner2 = innerSlider2.getBoundingClientRect()
-                let inner3 = innerSlider3.getBoundingClientRect()
-
-                if(parseInt(innerSlider1.style.left) > 0){
-                    innerSlider1.style.left = "0px";
-                } else if ( inner.right < outer.right ){
-                    innerSlider1.style.left = `-${inner.width - outer.width}px`
-                }
-
-                if(parseInt(innerSlider2.style.left) > 0){
-                    innerSlider2.style.left = "0px";
-                } else if ( inner2.right < outer.right ){
-                    innerSlider2.style.left = `-${inner2.width - outer.width}px`
-                }
-
-                if(parseInt(innerSlider3.style.left) > 0){
-                    innerSlider3.style.left = "0px";
-                } else if ( inner3.right < outer.right ){
-                    innerSlider3.style.left = `-${inner.width - outer.width}px`
-                }
-            }
-
-        </script>
-
-        <script>
-            $(document).ready(function(){
-                $(".slide_image2, .slide_image3").hide();
-
-
-                $(".product_menu1").click(function(){
-                    $(".slide_image1").stop().fadeIn(1000);
-                    $(".slide_image2, .slide_image3").stop().fadeOut(1000);
-                    $(".hidden_text4").stop().fadeIn(1000);
-                    $(".hidden_text5, .hidden_text6").stop().fadeOut(1000);
-                    $(".logo_hover_box1").stop().fadeIn(1000);
-                    $(".logo_hover_box2, .logo_hover_box3").stop().fadeOut(1000);
-                });
-                $(".product_menu2").click(function(){
-                    $(".slide_image2").stop().fadeIn(1000);
-                    $(".slide_image1, .slide_image3").stop().fadeOut(1000);
-                    $(".hidden_text5").stop().fadeIn(1000);
-                    $(".hidden_text4, .hidden_text6").stop().fadeOut(1000);
-                    $(".logo_hover_box2").stop().fadeIn(1000);
-                    $(".logo_hover_box1, .logo_hover_box3").stop().fadeOut(1000);
-                });
-                $(".product_menu3").click(function(){
-                    $(".slide_image3").stop().fadeIn(1000);
-                    $(".slide_image1, .slide_image2").stop().fadeOut(1000);
-                    $(".hidden_text6").stop().fadeIn(1000);
-                    $(".hidden_text4, .hidden_text5").stop().fadeOut(1000);
-                    $(".logo_hover_box3").stop().fadeIn(1000);
-                    $(".logo_hover_box1, .logo_hover_box2").stop().fadeOut(1000);
-                });
-            });
-        </script>
+        <script src="js/Grabbing_slide.js"></script>
+        <script src="js/section2_fade.js"></script>
         
-        <script>
-            $(document).ready(function(){
-                $(".logo_hover_box1").mouseenter(function(){
-                    $(this).css('background-image', 'url()');
-                    $(".hidden_text1").stop().fadeIn(1000);
-                    $(".hidden_text2, .hidden_text3").stop().fadeOut(1000);
-                });
-                $(".logo_hover_box1").mouseleave(function(){
-                    $(this).css('background-image', 'url(img/main/lego_hover1.png)')
-                    $(".hidden_text1").stop().fadeOut(1000);
-                });
-                $(".logo_hover_box2").mouseenter(function(){
-                    $(this).css('background-image', 'url()');
-                    $(".hidden_text2").stop().fadeIn(1000);
-                    $(".hidden_text1, .hidden_text3").stop().fadeOut(1000);
-                });
-                $(".logo_hover_box2").mouseleave(function(){
-                    $(this).css('background-image', 'url(img/main/lego_hover2.jpg)')
-                    $(".hidden_text2").stop().fadeOut(1000);
-                });
-                $(".logo_hover_box3").mouseenter(function(){
-                    $(this).css('background-image', 'url()');
-                    $(".hidden_text3").stop().fadeIn(1000);
-                    $(".hidden_text1, .hidden_text2").stop().fadeOut(1000);
-                });
-                $(".logo_hover_box3").mouseleave(function(){
-                    $(this).css('background-image', 'url(img/main/lego_hover3.jpg)')
-                    $(".hidden_text3").stop().fadeOut(1000);
-                });
-            });
-        </script>
 
         <div id="section3">
             <p>NEWS</p>
@@ -710,72 +346,7 @@
             </ul>
         </div>
 
-        <script>
-            $(document).ready(function(){
-                function Rotating_News(){
-                    $('.slide').stop().animate({marginLeft: -640}, function(){
-                        $('.slide li:first').appendTo('.slide');
-                            $('.slide').css({marginLeft:0});
-                    });
-
-                    i++;
-                    if(i > $('.small_news_box li:last').index()){
-                        i = 0;
-                    }
-                    $('.small_news_box li img').eq(i).stop().fadeIn(1000);
-                    $('.small_news_box li img').eq(i-1).stop().fadeOut(1000);
-                    
-
-                }
-
-                function Left(){
-                    $('.slide li:last').prependTo('.slide');
-                        $('.slide').css({marginLeft: -640});
-                            $('.slide').stop().animate({marginLeft: 0});
-                }
-
-                function Right(){
-                    $('.slide').stop().animate({marginLeft: -640}, function(){
-                        $('.slide li:first').appendTo('.slide');
-                            $('.slide').css({marginLeft: 0});
-                    });            
-                }
-
-                var i = 0;
-
-                function Increase(){
-                    i++;
-                    if(i > $('.small_news_box li:last').index()){
-                        i = 0;
-                    }
-                    $('.small_news_box li img').eq(i).stop().fadeIn(1000);
-                    $('.small_news_box li img').eq(i-1).stop().fadeOut(1000);
-                }
-
-                function Decrease(){
-                    i--;
-                    if(i > $('.small_news_box li:last').index()){
-                        i = 0;
-                    }
-                    $('.small_news_box li img').eq(i).stop().fadeIn(1000);
-                    $('.small_news_box li img').eq(i+1).stop().fadeOut(1000);
-                }
-
-
-                setInterval(Rotating_News, 4000);
-
-                $('.left').click(function(){
-                    Left();
-                    Decrease();
-
-                });
-
-                $('.right').click(function(){
-                    Right();
-                    Increase();
-                });
-            });
-        </script>
+        <script src="js/Slide_news.js"></script>
         
         <div id="section4">
             <div id="employment_container">
@@ -786,7 +357,7 @@
                     <div class="black_background2">
                     </div>
                     <div class="employ_icon_box">
-                        <a href="#"><img src="img/main/employ_icon.png" alt="고용 아이콘"></a>
+                        <a href="sub.html"><img src="img/main/employ_icon.png" alt="고용 아이콘"></a>
                         <p>&emsp;&emsp;채용 공지<br>&emsp;&emsp;알아보기</p>
                     </div>
                 </div>
@@ -797,80 +368,16 @@
                     <div class="black_background3">
                     </div>
                     <div class="shop_icon_box">
-                        <a href="#"><img src="img/main/shop_icon.png" alt="상점 아이콘"></a>
+                        <a href="sub.html"><img src="img/main/shop_icon.png" alt="상점 아이콘"></a>
                         <p>&emsp;&emsp;&emsp;&ensp;상점 방침<br>&emsp;&emsp;&emsp;&ensp;알아보기</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script>
-            $(document).ready(function(){
-                $('.employ_box').mouseenter(function(){
-                    $('.black_background2').stop().fadeIn(750);
-                    $('.visible_image1').stop().fadeOut(550);
-                    $('.hidden_image1').stop().fadeIn(550);
-                }).mouseleave(function(){
-                    $('.black_background2').stop().fadeOut(750);
-                    $('.hidden_image1').stop().fadeOut(550);
-                    $('.visible_image1').stop().fadeIn(550);
-                });
-
-                $('.shop_box').mouseenter(function(){
-                    $('.black_background3').stop().fadeIn(750);
-                    $('.visible_image2').stop().fadeOut(550);
-                    $('.hidden_image2').stop().fadeIn(550);
-                }).mouseleave(function(){
-                    $('.black_background3').stop().fadeOut(750);
-                    $('.hidden_image2').stop().fadeOut(550);
-                    $('.visible_image2').stop().fadeIn(550);
-                });
-
-            });
-        </script>
-
-        <script>
-
-            const Scroll_move = 200;
-            const ScrollElementList1 = document.querySelectorAll('.scroll_event');
-
-            const Scroll_Animation = function() {
-            for(const element of ScrollElementList1){
-            if(!element.classList.contains('show')){
-              if(window.innerHeight > element.getBoundingClientRect().top + Scroll_move) {
-                element.classList.add('show');
-                                                }
-                                            }
-                                        }
-                                     }
-
-            window.addEventListener('load', Scroll_Animation);
-            window.addEventListener('scroll', Scroll_Animation);
-        </script>
-
-        <script>
-            $(function(){
-                $(window).scroll(function(){
-                    var ws = $(this).scrollTop();
-                    var section3_box1 = $('.news_image_wrap').offset().top;
-                    var section3_box2 = $('.small_news_box').offset().top;
-                    var section4_box1 = $('.employ_box').offset().top;
-                    var section4_box2 = $('.shop_box').offset().top;
-                    if(ws > section3_box1 - 700){
-                        $('.news_image_wrap').css("transform", "translate(0px, 0px)").css("opacity", "1");
-                    }
-                    if(ws > section3_box2 - 700){
-                        $('.small_news_box').css("transform", "translate(0px, 0px)").css("opacity", "1");
-                    }
-                    if(ws > section4_box1 - 700){
-                        $('.employ_box').css("transform", "translate(0px, 0px)").css("opacity", "1");
-                    }
-                    if(ws > section4_box2 - 700){
-                        $('.shop_box').css("transform", "translate(0px, 0px)").css("opacity", "1");
-                    }
-                });
-            });
-        </script>
+        <script src="js/section4_fade.js"></script>
+        <script src="js/Scroll_Event.js"></script>
+        <script src="js/Scroll_Event_JQ.js"></script>
 
         <footer>
             <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo2.png" alt="레고 로고" class="lego_logo2"></a>
@@ -880,16 +387,16 @@
                     <a href="#"><li>TEL: 02 525 3500&emsp;|&emsp;</li></a>
                     <a href="#"><li>FAX: 02 525 3575</li></a>
                 </ul>
-            <button>개인정보처리방침</button>
-            </div>
-            <div id="footer_container2">
+                
                 <ul>
                     <a href="#"><li><img src="img/main/facebook_icon.png" alt="페이스북 이미지"></li></a>
                     <a href="#"><li><img src="img/main/instagram_icon.png" alt="인스타그램 이미지"></li></a>
                     <a href="#"><li><img src="img/main/pinterest_icon.png" alt="핀터레스트 이미지"></li></a>
                 </ul>
-                <button>전국 상점 바로가기 +</button>
+                
             </div>
+            <button>개인정보처리방침</button>
+            <button>전국 상점 바로가기 +</button>
             
             <p>COPYRIGHT© Lego ALL RIGHTS RESERVED</p>
         </footer>
