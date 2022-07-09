@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mobile_common.css">
+    <link rel="stylesheet" href="css/tablet_size.css">
+    <link rel="stylesheet" href="css/mobile_size.css">
     
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 
@@ -22,14 +25,40 @@
         <div class="blank_space2"></div>
         <header>
             <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo.png" alt="레고 로고"></a>
-            <ul>
+            <ul id="visibility_menu">
                <li><a href="sub.html">Home</a></li> 
                <li><a href="sub.html">About</a></li> 
                <li><a href="sub.html">Out Brand</a></li> 
                <li><a href="sub.html">Contact</a></li> 
                <li><a href="sub.html">Career</a></li> 
             </ul>
+            <div class="menu_icon">
+                <img src="img/main/menu_icon.png" alt="메뉴 아이콘">            
+            </div>
+            <div id="reveal_menu">
+                <button class="disappear_menu">X</button>
+                <ul>
+                    <li><a href="sub.html">Home</a></li> 
+                    <li><a href="sub.html">About</a></li> 
+                    <li><a href="sub.html">Out Brand</a></li> 
+                    <li><a href="sub.html">Contact</a></li> 
+                    <li><a href="sub.html">Career</a></li> 
+                </ul>
+            </div>
         </header>
+
+        <script>
+            $(document).ready(function(){
+                $('.menu_icon').click(function(){
+                    $('#reveal_menu').css('opacity', '1');
+                    $('#reveal_menu').css('width', '100%');
+                });
+                $('.disappear_menu').click(function(){
+                    $('#reveal_menu').css('opacity', '0');
+                    $('#reveal_menu').css('width', '0%');
+                });
+            });
+        </script>
 
         <div class="swiper Swipe_control">
             <div class="swiper-wrapper">
@@ -380,11 +409,11 @@
         <script src="js/Scroll_Event_JQ.js"></script>
 
         <footer>
-            <a href="https://lemondy97.github.io/porfolio3/"><img src="img/main/lego_logo2.png" alt="레고 로고" class="lego_logo2"></a>
+            <a href="https://lemondy97.github.io/porfolio3/" class="lego_logo2"><img src="img/main/lego_logo2.png" alt="레고 로고"></a>
             <div id="footer_container1">
                 <ul>
-                    <li><a href="#">서울특별시 동작구 보라매로3길 25 레고 5층&emsp;|&emsp;</a></li>
-                    <li><a href="#">TEL: 02 525 3500&emsp;|&emsp;</a></li>
+                    <li><a href="#">서울특별시 동작구 보라매로3길 25 레고 5층</a></li>
+                    <li><a href="#">TEL: 02 525 3500</a></li>
                     <li><a href="#">FAX: 02 525 3575</a></li>
                 </ul>
                 

@@ -27,7 +27,7 @@
         font-style: normal;
         }
 
-        #wrap { width: 100%; height: auto; overflow-x: hidden; }
+        #wrap { width: 100%; height: auto; overflow: hidden; }
         .blank_space1 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: left }
         .blank_space2 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: right }
 
@@ -36,9 +36,11 @@
 
         header { width: 1303px; height: 75px; margin: 0 auto; background-color: rgb(255, 207, 0); }
         header img { float: left; }
-        header ul { width: 70%; height: 100%; display: flex; justify-content: space-around; }
-        header ul > li { font-size: 22px; line-height: 65px; font-weight: 500; }
-        header ul > li > a { color: #333; font-family: 'Shippori Mincho', serif; color: #555; }
+        header #visibility_menu { width: 70%; height: 100%; display: flex; justify-content: space-around; }
+        header #visibility_menu > li { font-size: 22px; line-height: 65px; font-weight: 500; }
+        header #visibility_menu > li > a { color: #333; font-family: 'Shippori Mincho', serif; color: #555; }
+        header .menu_icon { opacity: 0; }
+        header #reveal_menu { opacity: 0; }
 
 
         footer { width: 100%; height: 200px; background-color: #222; color: #fff; font-family: 'MICEMyungjo'; position: relative; }
