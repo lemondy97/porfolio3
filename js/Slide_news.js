@@ -11,6 +11,7 @@
                     }
                     $('.small_news_box li img').eq(i).stop().fadeIn(1000);
                     $('.small_news_box li img').eq(i-1).stop().fadeOut(1000);
+
                     
 
                 }

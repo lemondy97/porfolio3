@@ -9,90 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sub.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/mobile_common.css">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-    <style>
 
-            @font-face {
-        font-family: 'MinSans-Bold';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Bold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-            @font-face {
-        font-family: 'LeferiBaseType-RegularA';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        }
-
-
-        #slider { width: 100%; height: 100%; position: relative; font-family: 'MinSans-Bold'; }
-        #slider h1 { width: 26%; font-size: 45px; color: #fff; position: absolute; top: 56%; left: 1%; z-index: 5; text-align: center; }
-
-        section { width: 80%; height: 950px; margin: 0 auto; background: none; }
-        section p:nth-of-type(1) { font-family: 'Eoe_Zno_M'; }
-        section p:nth-of-type(2) { font-family: 'LeferiBaseType-RegularA'; text-align: center; color: #333; font-size: 20px; padding-bottom: 4%; }
-        section h1 { color: #333; font-family: 'Eoe_Zno_M'; }
-
-        section #career_people_container {  width: 100%; height: 550px; display: flex; justify-content: space-around; }
-        .career_people_box1, .career_people_box2, .career_people_box3 { width: 475px; height: 550px; position: relative; font-family: 'Eoe_Zno_M'; cursor: pointer; 
-                                                                        transform: translateX(-500px); opacity: 0; transition: all 1s ease; }
-        .career_people_box1 { background-image: url(img/sub/leader.png); }
-        .career_people_box2 { background-image: url(img/sub/idea.jpg); }
-        .career_people_box3 { background-image: url(img/sub/unhesitating.jpg); }
-        .career_people_box1 .image_title1 { position: absolute; top: 3%; left: 7%; color: #111; font-size: 35px; }
-        .career_people_box2 .image_title2 { position: absolute; top: 3%; left: 4%; color: #fff; font-size: 35px; }
-        .career_people_box3 .image_title3 { position: absolute; top: 3%; left: 2%; color: #fff; font-size: 35px; } 
-        .hidden_image1, .hidden_image2, .hidden_image3 { display: none; position: absolute; top: 0; left: 0; }
-        .hidden_text1 { position: absolute; top: 3%; left: 50%; color: #111; width: 50%; display: none; font-size: 23px; font-family: 'LeferiBaseType-RegularA'; }
-        .hidden_text2 { position: absolute; top: 3%; left: 50%; width: 50%; display: none; font-size: 23px; font-family: 'LeferiBaseType-RegularA'; }
-        .hidden_text3 { position: absolute; top: 3%; left: 50%; width: 50%; display: none; font-size: 23px; font-family: 'LeferiBaseType-RegularA'; }
-
-        #section2 { width: 80%; height: 550px; margin: 0 auto; }
-        #section2 h1 { padding-bottom: 3%; }
-        #section2 #welfare_container1 { width: 100%; height: 200px; display: flex; justify-content: space-between; }
-        #section2 #welfare_container2 { width: 100%; height: 200px; display: flex; justify-content: space-between; }
-
-        .welfare_box { width: 30%; height: 100%; border-bottom: 1px solid lightgray; font-family: 'LeferiBaseType-RegularA'; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
-        .welfare_box h3 { padding-top: 2%; padding-bottom: 5%; }
-
-        #section3 { width: 80%; height: 600px; margin: 0 auto; background: none; }
-        #section3 h1 { padding-bottom: 3%; }
-        #section3 h3 { line-height: 100px; }
-        #section3 #circle_container { width: 100%; height: 250px; display: flex; justify-content: space-around; }
-        #section3 .circle { width: 18%; height: 250px; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
-        .circle p { font-family: 'LeferiBaseType-RegularA'; }
-        
-        #section3 .joining_box { margin-top: 3%; width: 100%; height: 200px; background-color: rgb(215, 215, 215); display: flex; }
-        .joining_box .half_box1 {  width: 40%; height: 100%; font-size: 22px; }
-        .half_box1 h3 { margin-top: 8%; margin-left: 4%; }
-        .joining_box .half_box2 { width: 60%; height: 100%; text-align: left; margin: 0 auto; font-family: 'LeferiBaseType-RegularA'; font-size: 17px; }
-        .half_box2 ul { margin-top: 7%; }
-        .half_box2 ul li { list-style: disc; }
-
-        #section4 { width: 80%; height: 650px; margin: 0 auto; position: relative; overflow: hidden; }
-        #section4 h1 { padding-top: 3%; padding-bottom: 3%; }
-        #section4 .option_button { margin-bottom: 1%; width: 300px; height: 55px; background: none; border-radius: 50px; font-size: 22px; font-family: 'LeferiBaseType-RegularA'; }
-        #section4 table { width: 100%; height: 120px; border-top: 1px solid #333; border-bottom: 1px solid lightgray; }
-        table .table_text1 { font-family: 'Eoe_Zno_M'; font-weight: 600; }
-        table .table_text2 { font-family: 'Eoe_Zno_M'; font-weight: bold; }
-
-      #section4 .email_boxes { width: 100%; height: 150px; display: flex; position: relative; margin-top: 5%; text-align: center; }
-      .email_boxes button { font-family: 'Eoe_Zno_M'; overflow: hidden; position: relative; display: inline-block; vertical-align: top; width: 33.3%; height: 100%; line-height: 50px; border: 1px solid #333; transition: all 0.5s; font-size: 25px; }
-      .email_boxes button:hover{ color: #fff; }
-      .email_boxes button:before{ content: ""; z-index: 1; position: absolute; background: #0CDFF2; transition: all 1s; }
-
-      .email_boxes.hover_color .email_button:before{ left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(45deg); width: 200%; height: 0; }
-      .email_boxes.hover_color .email_button:hover:before{ height: 300%; }
-      .email_boxes .email_button{ opacity: 0; transition: all 1s ease; transform: translateY(100px); }
-
-
-
-    </style>
 </head>
 <body>
     <div id="wrap">
@@ -138,56 +60,24 @@
                     <img src="img/sub/leader.png" alt="리더 이미지" class="visible_image1">
                     <img src="img/sub/leadership.jpg" alt="리더쉽 이미지" class="hidden_image1">
                     <h2 class="image_title1">Leader</h2>
-                    <p class="hidden_text1">우리의 원대한 계획을 이끌고 힘을 돋는 사람과 함꼐 하길 원합니다.</p>
+                    <p class="hidden_text1">우리의 원대한 계획을 이끌고 힘을 돋는 사람과 함께 하길 원합니다.</p>
                 </div>
                 <div class="career_people_box2">
                     <img src="img/sub/idea.jpg" alt="구상가 이미지" class="visible_image2">
                     <img src="img/sub/idea_man.jpg" alt="아이디어 이미지" class="hidden_image2">
                     <h2 class="image_title2">initiator</h2>
-                    <p class="hidden_text2">편견을 깨고 예상치 않은 발상의 사람과 함꼐 하길 원합니다.</p>
+                    <p class="hidden_text2">편견을 깨고 예상치 않은 발상의 사람과 함께 하길 원합니다.</p>
                 </div>
                 <div class="career_people_box3">
                     <img src="img/sub/unhesitating.jpg" alt="도전가 이미지" class="visible_image3">
                     <img src="img/sub/challenge_man.jpg" alt="인내 이미지" class="hidden_image3">
                     <h2 class="image_title3">Challenger</h2>
-                    <p class="hidden_text3">비전을 이루기까지 한계에 맞서고 인내의 사람과 함께 하길 원합니다.</p>
+                    <p class="hidden_text3">비전을 이루기까지 한계에 맞서는 인내의 사람과 함께 하길 원합니다.</p>
                 </div>
             </div>
         </section>
 
-        <script>
-            $(document).ready(function(){
-                $('.career_people_box1').mouseenter(function(){
-                    $('.visible_image1').stop().fadeOut(500);
-                    $('.hidden_image1').stop().fadeIn(500);
-                    $('.hidden_text1').stop().fadeIn(500);
-                }).mouseleave(function(){
-                    $('.hidden_image1').stop().fadeOut(500);
-                    $('.hidden_text1').stop().fadeOut(500);
-                    $('.visible_image1').stop().fadeIn(500);
-                });
-
-                $('.career_people_box2').mouseenter(function(){
-                    $('.visible_image2').stop().fadeOut(500);
-                    $('.hidden_image2').stop().fadeIn(500);
-                    $('.hidden_text2').stop().fadeIn(500);
-                }).mouseleave(function(){
-                    $('.hidden_image2').stop().fadeOut(500);
-                    $('.visible_image2').stop().fadeIn(500);
-                    $('.hidden_text2').stop().fadeOut(500);
-                });
-                $('.career_people_box3').mouseenter(function(){
-                    $('.visible_image3').stop().fadeOut(500);
-                    $('.hidden_image3').stop().fadeIn(500);
-                    $('.hidden_text3').stop().fadeIn(500);
-                }).mouseleave(function(){
-                    $('.hidden_image3').stop().fadeOut(500);
-                    $('.visible_image3').stop().fadeIn(500);
-                    $('.hidden_text3').stop().fadeOut(500);
-                });
-
-            });
-        </script>
+        <script src="js/sub_fade.js"></script>
 
         <div id="section2">
             <h1>복지제도</h1>
@@ -335,37 +225,7 @@
             <p>COPYRIGHT© Lego ALL RIGHTS RESERVED</p>
         </footer>
 
-        <script>
-                $(function(){
-                $(window).scroll(function(){
-                    var location = $(this).scrollTop();
-                    var section1_box1 = $('.career_people_box1').offset().top;
-                    var section1_box2 = $('.career_people_box2').offset().top;
-                    var section1_box3 = $('.career_people_box3').offset().top;
-                    var section2_boxes = $('.welfare_box').offset().top;
-                    var section3_boxes = $('.circle').offset().top;
-                    var section4_buttons = $('.email_button').offset().top;
-                    if(location > section1_box1 - 700){
-                        $('.career_people_box1').css("transform","translateX(0px)").css("opacity","1");
-                    }
-                    if(location > section1_box2 - 700){
-                        $('.career_people_box2').css("transform","translateX(0px)").css("opacity","1");
-                    }
-                    if(location > section1_box3 - 700){
-                        $('.career_people_box3').css("transform","translateX(0px)").css("opacity","1");
-                    }
-                    if(location > section2_boxes - 700){
-                        $('.welfare_box').css("transform","translateY(0px)").css("opacity","1");
-                    }
-                    if(location > section3_boxes - 700){
-                        $('.circle').css("transform","translateY(0px)").css("opacity","1");
-                    }
-                    if(location > section4_buttons - 700){
-                        $('.email_button').css("transform","translateY(0px)").css("opacity","1");
-                    }
-                });
-            });
-        </script>
+        <script src="js/sub_scroll_event.js"></script>
 
     </div>
 </body>

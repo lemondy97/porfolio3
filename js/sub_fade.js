@@ -1,0 +1,31 @@
+            $(document).ready(function(){
+                $('.career_people_box1').mouseenter(function(){
+                    $('.visible_image1').stop().fadeOut(500);
+                    $('.hidden_image1').stop().fadeIn(500);
+                    $('.hidden_text1').stop().fadeIn(500);
+                }).mouseleave(function(){
+                    $('.hidden_image1').stop().fadeOut(500);
+                    $('.hidden_text1').stop().fadeOut(500);
+                    $('.visible_image1').stop().fadeIn(500);
+                });
+
+                $('.career_people_box2').mouseenter(function(){
+                    $('.visible_image2').stop().fadeOut(500);
+                    $('.hidden_image2').stop().fadeIn(500);
+                    $('.hidden_text2').stop().fadeIn(500);
+                }).mouseleave(function(){
+                    $('.hidden_image2').stop().fadeOut(500);
+                    $('.visible_image2').stop().fadeIn(500);
+                    $('.hidden_text2').stop().fadeOut(500);
+                });
+                $('.career_people_box3').mouseenter(function(){
+                    $('.visible_image3').stop().fadeOut(500);
+                    $('.hidden_image3').stop().fadeIn(500);
+                    $('.hidden_text3').stop().fadeIn(500);
+                }).mouseleave(function(){
+                    $('.hidden_image3').stop().fadeOut(500);
+                    $('.visible_image3').stop().fadeIn(500);
+                    $('.hidden_text3').stop().fadeOut(500);
+                });
+
+            });
