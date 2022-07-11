@@ -44,14 +44,14 @@
         .welfare_box { width: 50%; height: 100%; border-bottom: 1px solid lightgray; font-family: 'LeferiBaseType-RegularA'; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
         .welfare_box h3 { padding-top: 2%; padding-bottom: 5%; }
 
-        #section3 { width: 80%; height: 800px; margin: 0 auto; background: none; }
+        #section3 { width: 80%; height: 875px; margin: 0 auto; background: none; }
         #section3 h1 { padding-bottom: 3%; }
         #section3 h3 { line-height: 100px; }
-        #section3 #circle_container { width: 100%; height: 250px; display: flex; justify-content: space-around; flex-wrap: wrap; }
+        #section3 #circle_container { width: 100%; height: 500px; display: flex; justify-content: space-around; flex-wrap: wrap; }
         #section3 .circle { width: 30%; height: 250px; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
         .circle p { font-family: 'LeferiBaseType-RegularA'; }
         
-        #section3 .joining_box { margin-top: 3%; width: 100%; height: 200px; background-color: rgb(215, 215, 215); display: flex; }
+        #section3 .joining_box { margin-top: 3%; width: 100%; height: 250px; background-color: rgb(215, 215, 215); display: flex; }
         .joining_box .half_box1 {  width: 40%; height: 100%; font-size: 22px; }
         .half_box1 h3 { margin-top: 8%; margin-left: 4%; }
         .joining_box .half_box2 { width: 60%; height: 100%; text-align: left; margin: 0 auto; font-family: 'LeferiBaseType-RegularA'; font-size: 17px; }

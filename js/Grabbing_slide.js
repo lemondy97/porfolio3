@@ -1,4 +1,9 @@
-	let Slider = document.querySelector("#slider_wrap")
+if (window.matchMedia("(max-width: 599px)").matches) { 
+
+   
+} else { 
+
+    let Slider = document.querySelector("#slider_wrap")
             let innerSlider1 = document.querySelector(".slide_image1")
             let innerSlider2 = document.querySelector(".slide_image2")
             let innerSlider3 = document.querySelector(".slide_image3")
@@ -65,3 +70,8 @@
                     innerSlider3.style.left = `-${inner.width - outer.width}px`
                 }
             }
+
+
+}
+
+

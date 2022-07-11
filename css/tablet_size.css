@@ -36,17 +36,17 @@
 
         .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-        section { width: 100%; height: 950px; background-color: rgb(14, 114, 182); color: #fff; }
+        section { width: 100%; height: auto; padding: 50px 0; background-color: rgb(14, 114, 182); color: #fff; }
 
         section p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
         section h1 { text-align: center; font-size: 30px; font-family: 'Eoe_Zno_M'; padding-bottom: 3%; }
         
 
-        section #video_space { width: 1000px; height: 562.5px; margin: 0 auto; }
+        section #video_space { width: 100%; height: auto; margin: 0 auto; }
         #video_space video { width: 100%; height: auto; }
-        section #border_buttons { width: 1000px; height: 125px; margin: 0 auto; background-color: rgb(35, 135, 194); display: flex; justify-content: space-between; }
+        section #border_buttons { width: 100%; height: 250px; margin: 0 auto; background-color: rgb(35, 135, 194); display: flex; justify-content: space-between; flex-wrap: wrap; }
         #border_buttons img { vertical-align: middle; }
-        #border_buttons .button_boxs { width: 125px; border-right: 1.5px solid #111; text-align: center; font-family: 'Minguk-Regular'; }
+        #border_buttons .button_boxs { width: 24%; border: 1px solid #111; text-align: center; font-family: 'Minguk-Regular'; }
 
         #section2 { width: 100%; height: 750px; position: relative; font-family: 'Eoe_Zno_M'; }
         #section2 p:nth-child(1) { text-align: center; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
@@ -64,6 +64,7 @@
         .slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
         .slide_image2 li img { width: 300px; }
 
+        #section2 #section2_menu { margin-left: calc(382px + 6%); }
         #section2 #section2_menu li { color: #333; font-size: 25px; position: relative; transition: 0.5s; }
         #section2_menu li:hover::after { transform: scaleX(1); transform-origin: center; }
         #section2_menu li::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(0); transform-origin: left; }
@@ -111,14 +112,14 @@
 
         
 
-        .left { position: absolute; top: 85%; left: 49%; font-size: 62.5px; color: #222; line-height: 40px;
+        .left { position: absolute; top: 85%; left: 23.7%; font-size: 62.5px; color: #222; line-height: 40px;
                              cursor: pointer; transition: all 0.5s ease; transform: translate(-50%); }
-        .right { position: absolute; top: 85%; left: 51.5%; font-size: 62.55px; color: #222; line-height: 40px;
+        .right { position: absolute; top: 85%; left: 35%; font-size: 62.55px; color: #222; line-height: 40px;
                              cursor: pointer; transition: all 0.5s ease; transform: translate(-50%); }
         .left:hover { color: #666; }
         .right:hover { color: #666; }
 
-        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: 19.5%; left: 67.5%; 
+        #section3 .small_news_box { width: 215px; height: 142px; overflow: hidden; position: relative; cursor: pointer; bottom: -2.5%; left: 59.2%; 
                                     opacity: 0; transition: all 1s ease; transform: translate(-500px, -100px);  }
         .small_news_box .black_background { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.35); }
 
