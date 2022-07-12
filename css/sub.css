@@ -15,7 +15,7 @@
         }
 
 
-        #slider { width: 100%; height: 100%; position: relative; font-family: 'MinSans-Bold'; }
+        #slider { width: 100%; height: 1000px; background-image: url("../img/sub/job_interview.jpg"); position: relative; font-family: 'MinSans-Bold'; }
         #slider h1 { width: 26%; font-size: 45px; color: #fff; position: absolute; top: 56%; left: 1%; z-index: 5; text-align: center; }
 
         section { width: 80%; height: 950px; margin: 0 auto; background: none; }
