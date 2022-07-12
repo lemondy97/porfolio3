@@ -53,6 +53,7 @@
             #section3 .joining_box { margin-top: 3%; width: 100%; height: 15%; background-color: rgb(215, 215, 215); display: flex; }
             .joining_box .half_box1 {  width: 40%; height: 100%; font-size: 22px; }
             .half_box1 h3 { margin-top: 8%; margin-left: 4%; }
+            .half_box1 h3 img { vertical-align: middle; }
             .joining_box .half_box2 { width: 60%; height: 100%; text-align: left; margin: 0 auto; font-family: 'LeferiBaseType-RegularA'; font-size: 17px; }
             .half_box2 ul { margin-top: 7%; }
             .half_box2 ul li { list-style: disc; }

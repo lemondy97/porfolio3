@@ -10,9 +10,9 @@
         .swiper_text1 p { font-size: 27px; }
         .swiper_text2 p { font-size: 27px; }
         .swiper_text3 p { font-size: 27px; }
-        .swiper .swiper_text1 { width: 22%; transition: all 0.5s ease; position: absolute; top: 50px; right: -415px; z-index: 10; opacity: 1; }
-        .swiper .swiper_text2 { width: 37%; transition: all 0.5s ease; position: absolute; top: -275px; left: 360px; z-index: 10; opacity: 1; }
-        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -275px; left: 120px; z-index: 10; opacity: 1; }
+        .swiper .swiper_text1 { width: 22%; transition: all 0.5s ease; position: absolute; top: 50px; right: -415px; z-index: 10; opacity: 1; display: none; }
+        .swiper .swiper_text2 { width: 37%; transition: all 0.5s ease; position: absolute; top: -275px; left: 360px; z-index: 10; opacity: 1; display: none; }
+        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -275px; left: 120px; z-index: 10; opacity: 1; display: none; }
 
 
         .swiper-slide {
@@ -36,6 +36,8 @@
 
         .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
+        #section2 #section2_menu li a:visited { color: #333; }
+
         section { width: 100%; height: auto; padding: 50px 0; background-color: rgb(14, 114, 182); color: #fff; }
 
         section p:nth-child(1) { text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; padding-top: 2%; padding-bottom: 0.5%; font-weight: bold; color: red; }
@@ -55,21 +57,22 @@
         #section2 > ul:nth-of-type(1) { width: 500px; height: 5%; margin: 0 auto; padding-left: 14%; display: flex; justify-content: space-around; }
         #section2 ul li { font-size: 25px; cursor: pointer; }
 
-        #section2 #slider_wrap { float: left;  white-space: nowrap; width: 700px; height: 500px; margin-top: 2.5%; margin-left: calc(382px + 6%); overflow: hidden; position: relative; }
+        #section2 #slider_wrap { margin: 0 auto;  white-space: nowrap; width: 1000px; height: 400px; overflow: hidden; position: relative; }
         #slider_wrap .slide_image1 { width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image1 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image1 li { width: 300px; height: 400px; margin-right: 50px; float: left; }
         .slide_image1 li img { width: 300px; }
 
         #slider_wrap .slide_image2 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image2 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image2 li { width: 300px; height: 400px; margin-right: 50px; float: left; }
         .slide_image2 li img { width: 300px; }
 
-        #section2 #section2_menu li { color: #333; font-size: 25px; position: relative; transition: 0.5s; }
-        #section2_menu li:hover::after { transform: scaleX(1); transform-origin: center; }
-        #section2_menu li::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(0); transform-origin: left; }
+        #section2 #section2_menu li a { color: #333; font-size: 25px; position: relative; transition: 0.5s; }
+        #section2_menu li a:hover::after { transform: scaleX(1); transform-origin: center; }
+        #section2_menu li a::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(0); transform-origin: left; }
+        #section2_menu li a.active::after { position: absolute; top: 100%; left: 0; content: ""; background-color: red; width: 100%; height: 4px; transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
 
         #slider_wrap .slide_image3 {width: 2800px; height: 100%; position: absolute; top: 0; left: 0; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; pointer-events: none; }
-        .slide_image3 li { width: 300px; height: 500px; margin-right: 50px; float: left; }
+        .slide_image3 li { width: 300px; height: 400px; margin-right: 50px; float: left; }
         .slide_image3 li img { height: 300px; }
 
         #slider_wrap .image_wrap, .image_wrap2, .image_wrap3 { width: 100%; height: 100%; text-align: center; }
@@ -90,7 +93,7 @@
         .logo_hover_box2 .hidden_text2 { display: none; }
         .logo_hover_box3 .hidden_text3 { display: none; }
 
-       #section2 .product_moving { font-size: 30px; color: coral; position: absolute; top: 85%; left: 43%; }
+       #section2 .product_moving { font-size: 30px; color: coral; text-align: center; }
 
        #section2 .hidden_text4 { font-family: 'Eoe_Zno_M'; }
        #section2 .hidden_text5 { display: none; }

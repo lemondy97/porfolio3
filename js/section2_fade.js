@@ -4,6 +4,9 @@
                 $(".product_menu1").click(function(){
                     $(".slide_image1").stop().fadeIn(1000);
                     $(".slide_image2, .slide_image3").stop().fadeOut(1000);
+                    $(".product_menu1 a").addClass('active');
+                    $(".product_menu2 a").removeClass('active');
+                    $(".product_menu3 a").removeClass('active');
                     $(".hidden_text4").stop().fadeIn(1000);
                     $(".hidden_text5, .hidden_text6").stop().fadeOut(1000);
                     $(".logo_hover_box1").stop().fadeIn(1000);
@@ -12,6 +15,9 @@
                 $(".product_menu2").click(function(){
                     $(".slide_image2").stop().fadeIn(1000);
                     $(".slide_image1, .slide_image3").stop().fadeOut(1000);
+                    $(".product_menu2 a").addClass('active');
+                    $(".product_menu1 a").removeClass('active');
+                    $(".product_menu3 a").removeClass('active');
                     $(".hidden_text5").stop().fadeIn(1000);
                     $(".hidden_text4, .hidden_text6").stop().fadeOut(1000);
                     $(".logo_hover_box2").stop().fadeIn(1000);
@@ -20,6 +26,9 @@
                 $(".product_menu3").click(function(){
                     $(".slide_image3").stop().fadeIn(1000);
                     $(".slide_image1, .slide_image2").stop().fadeOut(1000);
+                    $(".product_menu3 a").addClass('active');
+                    $(".product_menu1 a").removeClass('active');
+                    $(".product_menu2 a").removeClass('active');
                     $(".hidden_text6").stop().fadeIn(1000);
                     $(".hidden_text4, .hidden_text5").stop().fadeOut(1000);
                     $(".logo_hover_box3").stop().fadeIn(1000);
