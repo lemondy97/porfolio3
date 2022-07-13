@@ -28,15 +28,15 @@
         }
 
         #wrap { width: 100%; height: auto; overflow: hidden; }
-        .blank_space1 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: left }
-        .blank_space2 { width: 300px; height: 75px; background-color: rgb(255, 207, 0); float: right }
+        .blank_space1 { width: 150px; height: 75px; background-color: rgb(255, 207, 0); float: left; }
+        .blank_space2 { width: 150px; height: 75px; background-color: rgb(255, 207, 0); float: right; }
 
 
         footer a { color: #fff; }
 
-        header { width: 1303px; height: 75px; margin: 0 auto; background-color: rgb(255, 207, 0); }
+        header { width: 1603px; height: 75px; margin: 0 auto; background-color: rgb(255, 207, 0); }
         header img { float: left; }
-        header #visibility_menu { width: 70%; height: 100%; display: flex; justify-content: space-around; }
+        header #visibility_menu { width: 50%; height: 100%; display: flex; justify-content: space-around; }
         header #visibility_menu > li { font-size: 22px; line-height: 65px; font-weight: 500; }
         header #visibility_menu > li > a { color: #333; font-family: 'Shippori Mincho', serif; color: #555; }
         header .menu_icon { opacity: 0; }

@@ -52,15 +52,15 @@
         #footer_container1 ul:nth-of-type(1) li { float: left; width: 33.3%; }
 
         footer button:nth-of-type(1) { width: 150px; height: 35px; background-color: rgb(165, 165, 165); border-radius: 8px; color: #fff; cursor: pointer;
-                                       position: absolute; top: 64%; right: 56%; }
+                                       position: absolute; top: 54%; right: 56%; }
         footer button:nth-of-type(1):hover { background-color: rgb(140, 140, 140); }
 
         #footer_container1 ul:nth-of-type(2) { width: 50%; height: 100%; padding-top: 1.5%; }
         #footer_container1 ul:nth-of-type(2) li { float: left; width: 33.3%; }
 
         footer button:nth-of-type(2) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer;
-                                       position: absolute; top: 63%; right: 30%; }
+                                       position: absolute; top: 53%; right: 30%; }
         footer button:nth-of-type(2):hover { border-color: lightgray; color: lightgray}
-        footer p { text-align: center; padding-top: 1.5%; }
+        footer p { text-align: center; padding-top: 1.5%; position: absolute; top: 73%; left: 50%; }
 
         }
