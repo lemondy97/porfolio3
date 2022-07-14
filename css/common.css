@@ -43,21 +43,23 @@
         header #reveal_menu { opacity: 0; }
 
 
-        footer { width: 100%; height: 200px; background-color: #222; color: #fff; font-family: 'MICEMyungjo'; position: relative; }
+        footer { width: 100%; height: 250px; background-color: #222; color: #fff; font-family: 'MICEMyungjo'; position: relative; display: flex; flex-wrap: wrap; align-content: center; }
         footer .lego_logo2 { padding: 1.5% 0 0 7%; float: left; }
     
         footer #footer_container1 { width: 52%; display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0 auto; }
-        #footer_container1 ul:nth-of-type(1) { width: 100%; height: 100%; margin-top: 5%; }
-        #footer_container1 ul:nth-of-type(1) li { float: left; width: 33.3%; }
+        #footer_container1 ul:nth-of-type(1) { width: 100%; height: 20%; margin-top: 5%; }
+        #footer_container1 ul:nth-of-type(1) li { float: left; padding-right: 50px; }
+
+        footer #button_container { width: 15%; height: 30%; margin: 0 auto; display: flex; flex-wrap: wrap; padding-top: 50px; }
 
         footer button:nth-of-type(1) { width: 150px; height: 35px; background-color: rgb(165, 165, 165); border-radius: 8px; color: #fff; cursor: pointer;
-                                       position: absolute; top: 20%; right: 7%; }
+                                        margin-bottom: 30px; }
         footer button:nth-of-type(1):hover { background-color: rgb(140, 140, 140); }
 
-        #footer_container1 ul:nth-of-type(2) { width: 50%; height: 100%; padding-top: 1.5%; }
+        #footer_container1 ul:nth-of-type(2) { width: 50%; height: 20%;  }
         #footer_container1 ul:nth-of-type(2) li { float: left; width: 33.3%; }
 
         footer button:nth-of-type(2) { width: 185px; height: 45px; border-radius: 25px; background-color: #222; border-color: #fff; color: #fff; cursor: pointer;
-                                       position: absolute; top: 48%; right: 5.7%; }
+                                        }
         footer button:nth-of-type(2):hover { border-color: lightgray; color: lightgray}
-        footer p { text-align: center; padding-top: 1.5%; }
+        footer p { text-align: center; width: 100%; }

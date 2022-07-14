@@ -8,9 +8,9 @@
         .swiper_text1 p { font-size: 23px; }
         .swiper_text2 p { font-size: 23px; }
         .swiper_text3 p { font-size: 23px; }
-        .swiper .swiper_text1 { width: 28%; transition: all 0.5s ease; position: absolute; top: 50px; right: -415px; z-index: 10; opacity: 1; }
-        .swiper .swiper_text2 { width: 37%; transition: all 0.5s ease; position: absolute; top: -275px; left: 360px; z-index: 10; opacity: 1; }
-        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -275px; left: 90px; z-index: 10; opacity: 1; }
+        .swiper .swiper_text1 { width: 28%; transition: all 0.5s ease; position: absolute; top: 50px; right: -525px; z-index: 10; opacity: 1; }
+        .swiper .swiper_text2 { width: 37%; transition: all 0.5s ease; position: absolute; top: -355px; left: 360px; z-index: 10; opacity: 1; }
+        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -355px; left: 90px; z-index: 10; opacity: 1; }
 
 
         .swiper-slide {
@@ -131,9 +131,9 @@
         #section4 .visible_image1, .visible_image2 { position: absolute; top: 0; left: 0; }
         #section4 .hidden_image1, .hidden_image2 { display: none;  }
 
-        .employ_box > .employ_icon_box { opacity: 0; width: 25%; height: 25%; transition: all 1s ease; position: absolute; top: 50%; left: 50%; transform: translate(-50% -50%); z-index: 15; color: #fff; 
+        .employ_box > .employ_icon_box { opacity: 0; transition: all 1s ease; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 15; color: #fff; 
                                          font-size: 18px; font-family: 'Minguk-Regular'; }
-        .shop_box > .shop_icon_box { opacity: 0; width: 35%; height: 35%; transition: all 1s ease; position: absolute; top: 50%; left: 50%; transform: translate(-50% -50%); z-index: 15; color: #fff; 
+        .shop_box > .shop_icon_box { opacity: 0; transition: all 1s ease; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 15; color: #fff; 
                                      font-size: 18px; font-family: 'Minguk-Regular'; }
         .employ_icon_box img, .shop_icon_box img { vertical-align: middle; cursor: pointer; }
         .employ_box:hover > .employ_icon_box { opacity: 1; }
