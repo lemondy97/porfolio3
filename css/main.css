@@ -2,15 +2,15 @@
 
 
         .swiper { width: 100%; height: 100%; position: relative; font-family: 'Eoe_Zno_M'; cursor: grab; }
-        .swiper_text1 h1 { font-size: 50px; }
-        .swiper_text2 h1 { font-size: 50px; }
-        .swiper_text3 h1 { font-size: 50px; }
-        .swiper_text1 p { font-size: 27px; }
-        .swiper_text2 p { font-size: 27px; }
-        .swiper_text3 p { font-size: 27px; }
-        .swiper .swiper_text1 { width: 22%; transition: all 0.5s ease; position: absolute; top: 50px; right: -415px; z-index: 10; opacity: 1; }
+        .swiper_text1 h1 { font-size: 45px; padding-bottom: 1%; }
+        .swiper_text2 h1 { font-size: 45px; padding-bottom: 1%; }
+        .swiper_text3 h1 { font-size: 45px; padding-bottom: 1%; }
+        .swiper_text1 p { font-size: 23px; }
+        .swiper_text2 p { font-size: 23px; }
+        .swiper_text3 p { font-size: 23px; }
+        .swiper .swiper_text1 { width: 28%; transition: all 0.5s ease; position: absolute; top: 50px; right: -415px; z-index: 10; opacity: 1; }
         .swiper .swiper_text2 { width: 37%; transition: all 0.5s ease; position: absolute; top: -275px; left: 360px; z-index: 10; opacity: 1; }
-        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -275px; left: 120px; z-index: 10; opacity: 1; }
+        .swiper .swiper_text3 { width: 25%; transition: all 0.5s ease; position: absolute; top: -275px; left: 90px; z-index: 10; opacity: 1; }
 
 
         .swiper-slide {

@@ -31,7 +31,7 @@
         .career_people_box1 .image_title1 { position: absolute; top: 3%; left: 7%; color: #111; font-size: 35px; }
         .career_people_box2 .image_title2 { position: absolute; top: 3%; left: 4%; color: #fff; font-size: 35px; }
         .career_people_box3 .image_title3 { position: absolute; top: 3%; left: 2%; color: #fff; font-size: 35px; } 
-        .hidden_image1, .hidden_image2, .hidden_image3 { display: none; position: absolute; top: 0; left: 0; }
+        .hidden_image1, .hidden_image2, .hidden_image3 { display: none; position: absolute; top: 0%; left: 0%; }
         .hidden_text1 { position: absolute; top: 3%; left: 50%; color: #111; width: 50%; display: none; font-size: 21px; font-family: 'LeferiBaseType-RegularA'; }
         .hidden_text2 { position: absolute; top: 3%; left: 50%; width: 50%; display: none; font-size: 21px; font-family: 'LeferiBaseType-RegularA'; color: #fff; }
         .hidden_text3 { position: absolute; top: 3%; left: 50%; width: 50%; display: none; font-size: 21px; font-family: 'LeferiBaseType-RegularA'; color: #fff; }
