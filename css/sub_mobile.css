@@ -19,7 +19,7 @@
             #slider { width: 100%; height: 75vh; position: relative; background-image: url("../img/sub/job_interview.jpg"); font-family: 'MinSans-Bold'; background-position: center; }
             #slider h1 { width: 90%; font-size: 35px; color: #666; position: absolute; top: 66%; left: 1%; z-index: 5; text-align: center; }
     
-            section { width: 80%; height: 225vh; margin: 0 auto; background: none; }
+            section { width: 80%; height: 210vh; margin: 0 auto; background: none; }
             section > p:nth-of-type(1) { font-family: 'Eoe_Zno_M'; color: red; font-size: 22px; text-align: center; padding-top: 3%; padding-bottom: 0.5%; }
             section > p:nth-of-type(2) { font-family: 'LeferiBaseType-RegularA'; text-align: center; color: #333; font-size: 20px; padding-bottom: 4%; }
             section h1 { color: #333; font-family: 'Eoe_Zno_M'; font-size: 30px; text-align: center; padding-bottom: 1.5%; }
@@ -44,11 +44,11 @@
             .welfare_box { width: 100%; height: 100%; border-bottom: 1px solid lightgray; font-family: 'LeferiBaseType-RegularA'; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
             .welfare_box h3 { padding-top: 2%; padding-bottom: 5%; }
     
-            #section3 { width: 80%; height: 190vh; margin: 0 auto; background: none; }
+            #section3 { width: 80%; height: 220vh; margin: 0 auto; background: none; }
             #section3 h1 { padding-bottom: 3%; }
-            #section3 h3 { line-height: 100px; }
-            #section3 #circle_container { width: 100%; height: 1350px; display: flex; justify-content: center; flex-wrap: wrap; }
-            #section3 .circle { width: 75%; height: 250px; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
+            #section3 #circle_container { width: 100%; height: 300vw; }
+            #section3 .circle { width: 60vw; height: 60vw; float: left; margin: 0 0.7vw; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; 
+                            display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 1s ease; transform: translateY(100px); }
             .circle p { font-family: 'LeferiBaseType-RegularA'; }
             
             #section3 .joining_box { margin-top: 3%; width: 100%; height: 350px; background-color: rgb(215, 215, 215); display: flex; flex-wrap: wrap; font-family: 'LeferiBaseType-RegularA'; font-size: 17px; }
@@ -57,9 +57,9 @@
             .joining_box ul { margin-top: 7%; }
             .joining_box ul li { list-style: disc; margin-left: 3%; padding-right: 3%; }
     
-            #section4 { width: 80%; height: 77vh; margin: 0 auto; position: relative; overflow: hidden; }
+            #section4 { width: 80%; height: 82vh; margin: 0 auto; position: relative; overflow: hidden; }
             #section4 h1 { padding-top: 3%; padding-bottom: 3%; }
-            #section4 .option_button { margin-bottom: 1%; width: 300px; height: 55px; background: none; border-radius: 50px; font-size: 22px; font-family: 'LeferiBaseType-RegularA'; }
+            #section4 .option_button { margin-bottom: 1%; width: 300px; height: 40px; background: none; border-radius: 50px; font-size: 22px; font-family: 'LeferiBaseType-RegularA'; margin-top: 15px; margin-bottom: 25px; }
             #section4 table { width: 100%; height: 120px; border-top: 1px solid #333; border-bottom: 1px solid lightgray; font-size: 12px; }
             table .table_text1 { font-family: 'Eoe_Zno_M'; font-weight: 600; }
             table .table_text2 { font-family: 'Eoe_Zno_M'; font-weight: bold; }
