@@ -17,7 +17,7 @@
     
     
             #slider { width: 100%; height: 75vh; position: relative; background-image: url("../img/sub/job_interview.jpg"); font-family: 'MinSans-Bold'; background-position: center; }
-            #slider h1 { width: 90%; font-size: 35px; color: #666; position: absolute; top: 56%; left: 1%; z-index: 5; text-align: center; }
+            #slider h1 { width: 90%; font-size: 35px; color: #666; position: absolute; top: 66%; left: 1%; z-index: 5; text-align: center; }
     
             section { width: 80%; height: 225vh; margin: 0 auto; background: none; }
             section > p:nth-of-type(1) { font-family: 'Eoe_Zno_M'; color: red; font-size: 22px; text-align: center; padding-top: 3%; padding-bottom: 0.5%; }
@@ -52,25 +52,25 @@
             .circle p { font-family: 'LeferiBaseType-RegularA'; }
             
             #section3 .joining_box { margin-top: 3%; width: 100%; height: 350px; background-color: rgb(215, 215, 215); display: flex; flex-wrap: wrap; font-family: 'LeferiBaseType-RegularA'; font-size: 17px; }
-            .joining_box h3 { margin-top: 8%; margin-left: 4%; font-family: 'Eoe_Zno_M'; font-size: 20px; }
+            .joining_box h3 { margin-top: 8%; text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; width: 100%; }
             .joining_box h3 img { vertical-align: middle; }
             .joining_box ul { margin-top: 7%; }
-            .joining_box ul li { list-style: disc; margin-left: 3%; }
+            .joining_box ul li { list-style: disc; margin-left: 3%; padding-right: 3%; }
     
-            #section4 { width: 80%; height: 50vh; margin: 0 auto; position: relative; overflow: hidden; }
+            #section4 { width: 80%; height: 77vh; margin: 0 auto; position: relative; overflow: hidden; }
             #section4 h1 { padding-top: 3%; padding-bottom: 3%; }
             #section4 .option_button { margin-bottom: 1%; width: 300px; height: 55px; background: none; border-radius: 50px; font-size: 22px; font-family: 'LeferiBaseType-RegularA'; }
-            #section4 table { width: 100%; height: 120px; border-top: 1px solid #333; border-bottom: 1px solid lightgray; }
+            #section4 table { width: 100%; height: 120px; border-top: 1px solid #333; border-bottom: 1px solid lightgray; font-size: 12px; }
             table .table_text1 { font-family: 'Eoe_Zno_M'; font-weight: 600; }
             table .table_text2 { font-family: 'Eoe_Zno_M'; font-weight: bold; }
     
-          #section4 .email_boxes { width: 100%; height: 20%; display: flex; position: relative; margin-top: 5%; text-align: center; }
-          .email_boxes button { font-family: 'Eoe_Zno_M'; overflow: hidden; position: relative; display: inline-block; vertical-align: top; width: 33.3%; height: 100%; line-height: 50px; border: 1px solid #333; transition: all 0.5s; font-size: 25px; }
+          #section4 .email_boxes { width: 100%; height: 20%; display: flex; position: relative; margin-top: 5%; text-align: center; flex-wrap: wrap; }
+          .email_boxes button { font-family: 'Eoe_Zno_M'; overflow: hidden; position: relative; display: inline-block; vertical-align: top; width: 100%; height: 100%; line-height: 50px; border: 1px solid #333; transition: all 0.5s; font-size: 25px; }
           .email_boxes button:hover{ color: #fff; }
           .email_boxes button:before{ content: ""; z-index: -1; position: absolute; background: rgb(255, 207, 0); transition: all 1s; }
     
           .email_boxes.hover_color .email_button:before{ left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(45deg); width: 200%; height: 0; }
           .email_boxes.hover_color .email_button:hover:before{ height: 300%; }
-          .email_boxes .email_button{ opacity: 0; transition: all 1s ease; transform: translateY(-100px); cursor: pointer; font-size: 2.5vw; }
+          .email_boxes .email_button{ opacity: 0; transition: all 1s ease; transform: translateY(-100px); cursor: pointer; font-size: 22px; }
           
         }
