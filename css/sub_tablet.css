@@ -45,14 +45,14 @@
         .welfare_box { width: 45%; height: 100%; border-bottom: 1px solid lightgray; font-family: 'LeferiBaseType-RegularA'; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
         .welfare_box h3 { padding-top: 2%; padding-bottom: 5%; }
 
-        #section3 { width: 80%; height: 1450px; margin: 0 auto; background: none; }
+        #section3 { width: 80%; height: 850px; margin: 0 auto; background: none; }
         #section3 h1 { padding-bottom: 3%; }
-        #section3 #circle_container { width: 100%; height: 81vw; }
-        #section3 .circle { width: 27vw; height: 27vw; float: left; margin: 0 0.7vw; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; 
+        #section3 #circle_container { width: 100%; height: 48vw; }
+        #section3 .circle { width: 24vw; height: 24vw; float: left; margin: 0 0.7vw; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; 
                             display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 1s ease; transform: translateY(100px); }
         .circle p { font-family: 'LeferiBaseType-RegularA'; }
         
-        #section3 .joining_box { margin-top: 3%; width: 100%; height: 200px; background-color: rgb(215, 215, 215); display: flex; flex-wrap: wrap; font-family: 'LeferiBaseType-RegularA'; font-size: 15px; }
+        #section3 .joining_box { margin-top: 50px; width: 100%; height: 200px; background-color: rgb(215, 215, 215); display: flex; flex-wrap: wrap; font-family: 'LeferiBaseType-RegularA'; font-size: 15px; }
         .joining_box h3 { margin-top: 5%; margin-left: 2%; font-family: 'Eoe_Zno_M'; font-size: 18px; width: 100%; text-align: center; }
         .joining_box h3 img { vertical-align: middle; }
         .joining_box ul { margin-top: 5%; }

@@ -44,21 +44,21 @@
             .welfare_box { width: 100%; height: 100%; border-bottom: 1px solid lightgray; font-family: 'LeferiBaseType-RegularA'; opacity: 0; transition: all 1s ease; transform: translateY(100px); }
             .welfare_box h3 { padding-top: 2%; padding-bottom: 5%; }
     
-            #section3 { width: 80%; height: 220vh; margin: 0 auto; background: none; }
+            #section3 { width: 80%; height: 200vh; margin: 0 auto; background: none; }
             #section3 h1 { padding-bottom: 3%; }
-            #section3 #circle_container { width: 100%; height: 300vw; }
-            #section3 .circle { width: 60vw; height: 60vw; float: left; margin: 0 0.7vw; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; 
+            #section3 #circle_container { width: 100%; height: 250vw; }
+            #section3 .circle { width: 50vw; height: 50vw; float: left; margin: 0.5vw 0.7vw; text-align: center; border: 2px solid gainsboro; border-radius: 100%; opacity: 0; 
                             display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 1s ease; transform: translateY(100px); }
             .circle p { font-family: 'LeferiBaseType-RegularA'; }
             
-            #section3 .joining_box { margin-top: 3%; width: 100%; height: 350px; background-color: rgb(215, 215, 215); display: flex; flex-wrap: wrap; font-family: 'LeferiBaseType-RegularA'; font-size: 17px; }
+            #section3 .joining_box { margin-top: 100px; width: 100%; height: 350px; background-color: rgb(215, 215, 215); display: flex; flex-wrap: wrap; font-family: 'LeferiBaseType-RegularA'; font-size: 17px; }
             .joining_box h3 { margin-top: 8%; text-align: center; font-family: 'Eoe_Zno_M'; font-size: 20px; width: 100%; }
             .joining_box h3 img { vertical-align: middle; }
             .joining_box ul { margin-top: 7%; }
             .joining_box ul li { list-style: disc; margin-left: 3%; padding-right: 3%; }
     
-            #section4 { width: 80%; height: 82vh; margin: 0 auto; position: relative; overflow: hidden; }
-            #section4 h1 { padding-top: 3%; padding-bottom: 3%; }
+            #section4 { width: 80%; height: 100vh; margin: 0 auto; position: relative; overflow: hidden; }
+            #section4 h1 { padding-top: 50px; padding-bottom: 3%; }
             #section4 .option_button { margin-bottom: 1%; width: 300px; height: 40px; background: none; border-radius: 50px; font-size: 22px; font-family: 'LeferiBaseType-RegularA'; margin-top: 15px; margin-bottom: 25px; }
             #section4 table { width: 100%; height: 120px; border-top: 1px solid #333; border-bottom: 1px solid lightgray; font-size: 12px; }
             table .table_text1 { font-family: 'Eoe_Zno_M'; font-weight: 600; }
